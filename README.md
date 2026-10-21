@@ -21,6 +21,12 @@ BUI-DSI explores five interconnected challenges:
 
 The intended output is an **open, testable research program**. Claims about algebraic laws, approximate bisimulation, composition preservation, or biological organization remain conditional proposals until proved or empirically validated.
 
+---
+
+![Fig-001-BUI-DSI-Grand-Research-Map.png](figures/Fig-001-BUI-DSI-Grand-Research-Map.png)
+
+---
+
 ## 2. Research architecture
 
 ```text
@@ -50,6 +56,12 @@ The intended output is an **open, testable research program**. Claims about alge
 ```
 
 **Important distinctions:** observation is not explanation; masking is not necessarily intervention; a score is not a decision; a decision is not an executed trajectory; repeated execution is not automatically learning; local competence does not guarantee system-level correctness.
+
+---
+
+![Fig-002-From-Static-SI-to-Dynamic-UIERU.png](figures/Fig-002-From-Static-SI-to-Dynamic-UIERU.png)
+
+---
 
 ## 3. Start reading
 
@@ -99,6 +111,12 @@ See also [START-HERE.md](START-HERE.md), [CONTENTS.md](CONTENTS.md), [GLOSSARY.m
 ### RSI and UIERU: an important adjacent frontier
 
 Recursive Self-Improvement (RSI), including LLM-agent-based approaches, is a particularly relevant neighboring research area. Both RSI and UIERU address evaluative feedback, adaptation, and changing intelligent systems. They are **not identical**: RSI emphasizes the process of self-improvement; UIERU proposes explicit structural interfaces for evaluation, relay, comparison, and governed evolution. UIERU aims for greater **structural** traceability, but does not automatically explain the internal mechanisms of opaque LLM components. A promising two-way interface is **RSI candidate generation + UIERU structural evaluation and governance**, subject to independent validation.
+
+---
+
+![Fig-008-Open-Research-Relay-Ecosystem.png](figures/Fig-008-Open-Research-Relay-Ecosystem.png)
+
+---
 
 ## 7. Four proposed interface specifications
 

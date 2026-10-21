@@ -97,7 +97,7 @@ At the time of drafting this index, an **eight-panel composite overview image** 
 From a document under `docs/`, `cases/`, `research-relay/`, or `specs/`, use a relative path such as:
 
 ```markdown
-![Figure 4. Perspective Differential Tree](../figures/Fig-004-Perspective-Differential-Tree.png)
+![Figure 4. Perspective Differential Tree](figures/Fig-004-Perspective-Differential-Tree.png)
 
 *Figure 4. Perspective Differential Tree (PDT). Differential claims are indexed by explicit comparison conditions and evidence.*
 ```
@@ -130,3 +130,4 @@ From root-level `README.md`, use:
 **Figure status:** Conceptual illustrations of an open research agenda; not empirical results, proofs, or evidence of biological implementation.
 
 The index is a living navigation artifact. Future figure revisions should preserve traceability to the relevant paper, specification, and version.
+
