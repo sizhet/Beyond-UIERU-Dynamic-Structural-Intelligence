@@ -1,0 +1,32 @@
+{
+  "title": "Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay",
+  "upload_type": "publication",
+  "publication_type": "workingpaper",
+  "description": "An open research framework extending Universal Intelligence Evolution and Relay Units (UIERU) toward dynamic structural intelligence. It develops research questions and candidate interfaces for perspective masking, perspective differential trees, perspective-aware structural queries, conditional dynamic behavioral equivalence, relay composition and contracts, open structural evolution, and interdisciplinary research relay. The repository includes conceptual papers, illustrative cases, interface specifications, open questions, testable hypotheses, and a validation roadmap. Proposed formalisms and hypotheses are not presented as established theorems or empirically validated findings.",
+  "creators": [
+    {
+      "name": "Tan, Sizhe"
+    },
+    {
+      "name": "GPT-Obot"
+    }
+  ],
+  "keywords": [
+    "structural intelligence",
+    "dynamic intelligence",
+    "UIERU",
+    "perspective masking",
+    "perspective differential tree",
+    "structural query",
+    "behavioral equivalence",
+    "relay composition",
+    "open structural evolution",
+    "recursive self-improvement",
+    "open research relay"
+  ],
+  "license": "Apache-2.0",
+  "language": "eng",
+  "version": "1.0.0",
+  "access_right": "open",
+  "notes": "Research agenda and proposed interfaces; not a report of completed experimental validation."
+}
