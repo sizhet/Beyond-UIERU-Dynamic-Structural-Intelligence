@@ -12,6 +12,12 @@ The Universal Intelligence Evolution and Relay Unit (UIERU) shifts Structural In
 
 **Keywords:** UIERU; dynamic structural intelligence; perspective masking; observation semantics; scoring forest; localization; intervention; provenance; temporal state; counter-evidence; structural relay
 
+---
+
+![Fig-003-Perspective-Masking-Architecture.png](../figures/Fig-003-Perspective-Masking-Architecture.png)
+
+---
+
 ## 1. Introduction: The Observation Problem After UIERU
 
 Static SI tools typically assume that a useful portion of the research object can be represented as a relatively stable structure: a differential tree, a capability index, a contract, a name–type registry, or a calling graph. A dynamic UIERU, by contrast, may change the selected action when its perspective changes, update its internal state after feedback, and alter its relay partners or scoring configuration. The same unit can consequently present different observable behavior at different times even when its structural identifier remains unchanged.
@@ -115,6 +121,12 @@ A counterfactual mask asks what would have occurred under a hypothetical change 
 | Evidence | Provenance, confidence, source categories | Robustness and counter-evidence | Biased omission |
 
 Masks may be composed, but composition is meaningful only when the corresponding semantics and admissible inputs are defined. A frozen-evolution run is not equivalent to merely hiding evolution fields in a log.
+
+---
+
+![Fig-003-Perspective-Masking-Architecture.png](../figures/Fig-003-Perspective-Masking-Architecture.png)
+
+---
 
 ## 6. Observation Views and the SIF Bridge
 
@@ -312,8 +324,6 @@ Negative findings and proofs of impossibility are legitimate research relay outc
 - **BUI-006:** formulates mathematical foundations and open formal problems.
 - **BUI-007:** studies biological intelligence and dynamic organizational biomimicry.
 - **BUI-008:** develops open research relay and the next research horizon.
-
-**Suggested figure placement:** `figures/Fig-003-Perspective-Masking-Architecture.png` after Section 5; `figures/Fig-004-Perspective-Differential-Tree.png` is primarily associated with BUI-003.
 
 ## 18. Conclusion
 

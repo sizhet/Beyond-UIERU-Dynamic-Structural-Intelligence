@@ -12,6 +12,16 @@ Structural Intelligence (SI) research has progressively shifted its engineering 
 
 **Keywords:** Structural Intelligence; UIERU; dynamic intelligence units; perspective masking; scoring forest; localization; structural relay; behavioral equivalence; open research relay; mathematical foundations; biological intelligence
 
+---
+
+![Fig-001-BUI-DSI-Grand-Research-Map.png](../figures/Fig-001-BUI-DSI-Grand-Research-Map.png)
+
+---
+
+![Fig-002-From-Static-SI-to-Dynamic-UIERU.png](../figures/Fig-002-From-Static-SI-to-Dynamic-UIERU.png)
+
+---
+
 ## 1. Introduction: A Change in the Research Object
 
 Early SI work could often isolate a structure and ask how to represent, search, score, compose, or refine it. A metric differential tree, a context-bound trigger, a universal tree node, or a calling graph can be studied as a relatively stable artifact, even if it participates in a changing runtime. This decomposition is productive: explicit interfaces and local experiments make engineering questions tractable.

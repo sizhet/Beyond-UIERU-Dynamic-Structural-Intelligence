@@ -11,6 +11,12 @@ Dynamic intelligence units challenge structural-intelligence methods originally 
 
 **Keywords:** dynamic structural intelligence; UIERU; perspective masking; transition systems; bisimulation; compositional verification; provenance; temporal query; open evolution; research relay
 
+---
+
+![Fig-007-Mathematics-Neuroscience-and-SI.png](../figures/Fig-007-Mathematics-Neuroscience-and-SI.png)
+
+---
+
 ## 1. Motivation and scope
 
 Earlier SI work—including MDT, CCC, UTN, portable intelligence pieces, scoring forests, SIF localization, and UIERU—motivates a shift from describing structures to comparing *stateful, interacting, evolving* intelligence units. This paper asks which properties of a unit remain observable, comparable, or provable when perspectives, histories, and compositions change.

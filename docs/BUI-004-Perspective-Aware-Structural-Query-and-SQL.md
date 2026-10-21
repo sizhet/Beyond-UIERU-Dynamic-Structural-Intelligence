@@ -11,6 +11,12 @@ Universal Intelligence Evolution and Relay Units (UIERUs) shift structural-intel
 
 **Keywords:** UIERU; structural intelligence; perspective masking; SQL; temporal databases; dynamic localization; differential trees; provenance; research relay.
 
+---
+
+![Fig-005-Perspective-Aware-Structural-Query.png](../figures/Fig-005-Perspective-Aware-Structural-Query.png)
+
+---
+
 ## 1. Research Motivation
 
 Structural Intelligence Framework (SIF) localization can index stable properties such as unit identity, capabilities, interfaces, and contracts. A dynamic UIERU also changes its scoring, decisions, execution traces, and learned state as perspectives and contexts change. A query such as “find a coding unit with a model-selection capability” is therefore incomplete. Researchers may also ask which units change their selection under a cost perspective, which changes are repeatable, and whether an observed change resulted from a different perspective or from a changed environment.

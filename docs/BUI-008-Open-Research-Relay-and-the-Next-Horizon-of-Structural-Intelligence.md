@@ -14,6 +14,10 @@ The Universal Intelligence Evolution and Relay Unit (UIERU) motivates a change i
 
 ---
 
+![Fig-008-Open-Research-Relay-Ecosystem.png](../figures/Fig-008-Open-Research-Relay-Ecosystem.png)
+
+---
+
 ## 1. Purpose and Scope
 
 This paper is both the conclusion of the BUI-DSI core sequence and a handoff to future researchers. It advances three limited claims:

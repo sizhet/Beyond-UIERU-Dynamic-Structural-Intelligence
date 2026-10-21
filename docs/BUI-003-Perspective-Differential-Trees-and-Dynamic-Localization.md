@@ -11,6 +11,12 @@ Static structural localization retrieves intelligence assets by descriptors, cap
 
 **Keywords:** structural intelligence; UIERU; perspective masking; differential tree; dynamic localization; scoring forest; trajectory; counter-evidence; research relay.
 
+---
+
+![Fig-004-Perspective-Differential-Tree.png](../figures/Fig-004-Perspective-Differential-Tree.png)
+
+---
+
 ## 1. Motivation: From Structural Addressing to Behavioral Addressing
 
 The Structural Intelligence Framework (SIF) supplies a vocabulary for locating and connecting capabilities, contracts, precedents, and executable intelligence structures. These tools can often address the relatively stable part of a UIERU. Yet a structurally identical unit can choose different actions under different goals, contexts, histories, and available resources. A static descriptor alone therefore does not determine suitability for a task.

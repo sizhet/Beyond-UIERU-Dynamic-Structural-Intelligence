@@ -11,6 +11,12 @@ Universal Intelligence Evolution and Relay Units (UIERUs) invite a shift from co
 
 **Keywords:** UIERU; dynamic structural intelligence; behavioral equivalence; approximate bisimulation; relay composition; contextual equivalence; contract preservation; emergence; structural evolution; counter-evidence.
 
+---
+
+![Fig-006-Dynamic-Equivalence-and-Relay-Composition.png](../figures/Fig-006-Dynamic-Equivalence-and-Relay-Composition.png)
+
+---
+
 ## 1. Motivation: Beyond Static Unit Matching
 
 Traditional capability matching asks whether a unit exposes a required function or contract. Dynamic structural intelligence asks a harder question: whether a unit will behave acceptably under a specified perspective, environment, task distribution, and history—and whether replacing or combining it with another unit changes system behavior.
