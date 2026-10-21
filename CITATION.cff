@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: >-
+  If you use or discuss this research repository, please cite the version
+  archived with its DOI when available.
+title: 'Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay'
+type: software
+authors:
+  - family-names: Tan
+    given-names: Sizhe
+  - name: GPT-Obot
+version: 1.0.0
+date-released: 2026-10-21
+repository-code: 'https://github.com/sizhet/Beyond-UIERU-Dynamic-Structural-Intelligence'
+abstract: >-
+  An open research agenda on dynamic structural intelligence units,
+  perspective masking, differential localization and queries, conditional
+  behavioral equivalence, relay composition, structural evolution, and
+  verifiable open research relay. Proposed formalisms and hypotheses are
+  distinguished from validated findings.
+keywords:
+  - structural intelligence
+  - UIERU
+  - dynamic intelligence
+  - perspective masking
+  - research relay
+  - behavioral equivalence
+  - structural evolution
