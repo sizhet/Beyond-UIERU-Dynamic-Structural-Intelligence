@@ -1,92 +1,93 @@
 # Changelog
 
-All notable changes to the **Universal Intelligence Evolution and Relay Unit (UIERU)** research repository are documented here.
+All notable changes to **Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay (BUI-DSI)** are documented here.
 
-This repository presents a research architecture and proposed engineering specifications. Publication of a specification does **not** imply that an implementation, benchmark result, or conformance certification exists.
+This repository is a research framework and open research agenda. A release documents the state of its proposals and research interfaces; it does **not** imply that the proposed mathematical properties, biological analogies, or engineering hypotheses have been proved or empirically validated.
 
-The format follows the principles of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The initial release is labeled **v1.0.0**; its release date should be set to the actual GitHub release date when published.
+The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and version labels follow [Semantic Versioning](https://semver.org/) as a documentation convention.
 
 ## [Unreleased]
 
 ### Planned
+- Investigate a dedicated `RELAY-006-RSI-UIERU-Convergence-and-Structural-Governance.md` research piece, subject to inclusion in a later release.
+- Conduct formal proofs, counterexample construction, independent replication, and empirical validation of candidate claims.
+- Develop machine-checkable examples and conformance tests for the four proposed specifications.
+- Export and review eight individual figure files, ensuring captions and links match the figure index.
+- Incorporate external research contributions, including negative results and revisions to assumptions.
 
-- Conduct reproducible experiments defined in `VALIDATION-ROADMAP.md` and report measured results, including negative findings.
-- Implement and independently validate the canonical contracts, lifecycle protocols, and relay interfaces described in `specs/`.
-- Evaluate forward guidance, multi-trail exploration, evidence-preserving relay, and structural RSI against cost-matched baselines.
-- Investigate subject-indexed world models, platform-scale intelligence organization, and subject sovereignty as separate research extensions.
-- Review diagrams, cross-references, and repository metadata before DOI archiving.
+## [1.0.0] - 2026-10-21
 
-## [1.0.0] - Release date pending
+### Added — Research foundation
+- Eight core papers in `docs/`:
+  - `BUI-001-From-Static-Structural-Intelligence-to-Dynamic-Intelligence-Units.md`
+  - `BUI-002-Perspective-Masking-and-Dynamic-Structural-Observation.md`
+  - `BUI-003-Perspective-Differential-Trees-and-Dynamic-Localization.md`
+  - `BUI-004-Perspective-Aware-Structural-Query-and-SQL.md`
+  - `BUI-005-Dynamic-Equivalence-Relay-Composition-and-Emergent-Relations.md`
+  - `BUI-006-Mathematical-Foundations-and-Open-Formal-Problems.md`
+  - `BUI-007-Biological-Intelligence-and-Dynamic-Organizational-Biomimicry.md`
+  - `BUI-008-Open-Research-Relay-and-the-Next-Horizon-of-Structural-Intelligence.md`
+- Three illustrative cases in `cases/`:
+  - `CASE-001-Perspective-Masked-Model-Selection.md`
+  - `CASE-002-Dynamic-Equivalence-and-Relay-Substitution.md`
+  - `CASE-003-Context-Dependent-Biological-Intelligence.md`
+- Five open research relay pieces in `research-relay/`:
+  - `RELAY-001-Perspective-Masking-Algebra.md`
+  - `RELAY-002-Dynamic-Behavioral-Equivalence.md`
+  - `RELAY-003-Relay-Composition-and-Contracts.md`
+  - `RELAY-004-Biological-Dynamic-Intelligence.md`
+  - `RELAY-005-Open-Structural-Evolution.md`
+- `research-relay/RESEARCH-COLLABORATION.md` for contribution pathways, research provenance, counter-evidence, and cross-disciplinary collaboration.
+- Four proposed research interface specifications in `specs/`:
+  - `SPEC-001-Dynamic-UIERU-Observation-Model.md`
+  - `SPEC-002-Perspective-Masking-Contract.md`
+  - `SPEC-003-Dynamic-Differential-and-Query-Schema.md`
+  - `SPEC-004-Research-Relay-Piece-Contract.md`
 
-### Added
+### Added — Repository navigation and research planning
+- `README.md`, `START-HERE.md`, and `CONTENTS.md` for overview and reading paths.
+- `GLOSSARY.md` to distinguish observation from explanation, scores from decisions, trajectories from learning, and behavioral equivalence from substitutability.
+- `FIGURE-INDEX.md` to document eight planned figure topics and placements.
+- `FUTURE-DIRECTIONS.md` describing the long-term research agenda.
+- `OPEN-QUESTIONS.md` organizing 29 open research questions.
+- `TESTABLE-HYPOTHESES.md` organizing 15 empirical hypotheses and separate candidate formal propositions.
+- `VALIDATION-ROADMAP.md` organizing proposed validation stages P0–P6.
 
-#### Core research papers
+### Introduced — Research concepts
+- Dynamic UIERU observation with explicit context, perspective, history, evidence, and provenance.
+- Perspective Masking with distinctions among projection, replay, simulation, intervention, and counterfactual estimation.
+- Perspective Differential Trees (PDT) and Perspective-Aware Structural Query (PASQ).
+- Four differential categories: scoring, decision, trajectory, and learning.
+- Conditional dynamic behavioral equivalence, relay substitution, contract preservation, and evolution-aware comparison.
+- Open Structural Evolution with evaluator governance, counter-evidence, and anti-Goodhart safeguards.
+- Research Relay Pieces as portable descriptions of problems, models, hypotheses, evidence, validation, and interfaces.
+- An exploratory RSI–UIERU convergence direction, without asserting equivalence between RSI, LLMs, and UIERU architectures.
+- Biological dynamic organizational analogies framed as testable hypotheses, not established neural mechanisms.
 
-- `docs/UIERU-001-From-Calling-Paths-to-Evolvable-Intelligence-Units.md` — introduces UIERU as a composable intelligence organization unit.
-- `docs/UIERU-002-Canonical-UIERU-Contracts-Execution-Guidance-and-Relay.md` — specifies the canonical five-part model `U = (K, P, F, R, E)`.
-- `docs/UIERU-003-Calling-Path-and-Scoring-Forest-Duality.md` — examines the coupling of executable paths and valuation/guidance structures.
-- `docs/UIERU-004-Forward-Guidance-and-Multi-Trail-Intelligence.md` — develops forward guidance and multi-trail exploration.
-- `docs/UIERU-005-Sandbox-Threading-and-Counter-Evidence.md` — develops sandboxed exploration and adversarial evidence gathering.
-- `docs/UIERU-006-Composition-Nesting-Folding-and-Contract-Reconciliation.md` — examines nested units, scoring reconciliation, and composition boundaries.
-- `docs/UIERU-007-Structural-Relay-Provenance-and-Intelligence-Portability.md` — proposes evidence-preserving relay and provenance mechanisms.
-- `docs/UIERU-008-Bidirectional-Collective-Learning-and-Relay-Ecosystems.md` — examines feedback-based collective structural learning.
-- `docs/UIERU-009-Residual-Driven-Structural-Evolution-and-Recursive-Improvement.md` — proposes governed structural improvement from residuals and counter-evidence.
-- `docs/UIERU-010-Universal-Architecture-Engineering-Boundaries-and-Validation.md` — consolidates architecture, limitations, and evaluation requirements.
+### Research integrity and limitations
+- Mathematical laws and equivalence properties are **candidate propositions** unless accompanied by proofs.
+- Synthetic case data and proposed experiments are **illustrative**, not empirical results.
+- Structural interpretability is distinguished from interpretation of opaque per-node models.
+- Counterexamples, negative findings, and revisions are first-class research outcomes.
+- The presence of a specification does not establish implementation conformance or deployment safety.
 
-#### Engineering cases
+### Figure publication note
+- Eight figure subjects and intended filenames are catalogued in `FIGURE-INDEX.md`. The initial artwork was produced as a composite overview; individual `figures/Fig-001-...png` through `Fig-008-...png` files must be checked or exported before the release is considered visually complete. Do not treat the figure index as proof that those eight separate assets are present.
 
-- `cases/CASE-001-Neighborhood-Lawn-Service-as-a-Minimal-UIERU.md` — an accessible minimal task-to-relay example.
-- `cases/CASE-002-Multi-Agent-Software-Engineering-and-Multi-Trail-Sandboxes.md` — multi-agent software engineering and RSI-based intelligence driving.
-- `cases/CASE-003-Large-Scale-Organizational-Relay-and-Collective-Learning.md` — organizational-scale relay and feedback.
-
-#### Proposed engineering specifications
-
-- `specs/SPEC-001-Canonical-UIERU-Contract-and-Schema.md` — canonical contract and schema proposal.
-- `specs/SPEC-002-Forward-Guidance-and-Multi-Trail-Lifecycle.md` — guidance and sandbox lifecycle proposal.
-- `specs/SPEC-003-Structural-Relay-and-Portfolio-Exchange.md` — relay and portfolio exchange proposal.
-- `specs/SPEC-004-Composition-Evolution-and-Conformance.md` — composition, structural evolution, and conformance proposal.
-
-#### Research extensions
-
-- `docs/extensions/UIERU-EXT-001-Subject-Indexed-World-Models-and-Structural-Memory.md` — subject-indexed world models and memory.
-- `docs/extensions/UIERU-EXT-002-Big-Animal-Intelligence-Organization-and-Platform-Level-Structural-RSI.md` — platform-scale intelligence organization and structural RSI.
-- `docs/extensions/UIERU-EXT-003-Subject-Sovereignty-and-Collective-Intelligence-Ecosystems.md` — sovereignty-aware collective learning.
-
-#### Figures and navigation
-
-- Eight planned canonical illustrations, `figures/Fig-001-*.png` through `figures/Fig-008-*.png`, covering the UIERU lifecycle, scoring duality, multi-trail exploration, sandboxes, composition, relay, collective learning, and the grand architecture. **Verify that all eight individually named PNG files exist before release; an eight-panel composite does not by itself satisfy these paths.**
-- `README.md` — project overview and engineering-first entry point.
-- `START-HERE.md` — reader-oriented onboarding and reading paths.
-- `CONTENTS.md` — repository index and document map.
-- `GLOSSARY.md` — canonical terminology and critical distinctions.
-- `FIGURE-INDEX.md` — figure inventory, captions, and placement guidance.
-- `FUTURE-DIRECTIONS.md` — proposed research directions.
-- `OPEN-QUESTIONS.md` — open research problems.
-- `TESTABLE-HYPOTHESES.md` — hypotheses, baselines, and falsification criteria.
-- `VALIDATION-ROADMAP.md` — staged experimental plan and decision gates.
-- `CHANGELOG.md` — release history and status distinctions.
-
-### Research position
-
-- Established **Engineering First · Theory Supported · Research Open** as the repository's editorial approach.
-- Defined UIERU as an **optional organizational structure**, not a replacement for humans, LLMs, agents, tools, or existing workflows.
-- Distinguished **forward guidance** from retrospective scoring and **structural improvement proposals** from validated improvements.
-- Required independent verification, explicit authority boundaries, evidence provenance, and rollback for governed structural RSI.
-- Distinguished intelligence portability from authority transfer and subject-indexed functional memory from claims about consciousness.
-- Treated broad applicability and performance improvements as **hypotheses**, not demonstrated results.
-
-### Release preparation notes
-
-Before publishing v1.0.0 and minting its DOI:
-
-1. Confirm that all referenced files and eight independent PNG illustrations exist and that relative links resolve.
-2. Finalize `CITATION.cff`, `.zenodo.json`, and release notes with consistent title, author credits (**Sizhe Tan & GPT-Obot**), version, license, and actual release date.
-3. Check GitHub rendering of Markdown, code blocks, equations, and figure captions.
-4. Confirm that proposed schemas and tests are not described as implemented or experimentally verified.
-5. Create a GitHub release tagged `v1.0.0`, then verify the Zenodo archive and assigned DOI before adding DOI-dependent links.
+### Release administration
+- Initial research-documentation release candidate prepared for GitHub and a prospective Zenodo DOI deposit.
+- A DOI must not be cited as assigned until Zenodo has issued it.
+- Authorship: **Sizhe Tan & GPT-Obot**.
 
 ---
 
-**Authors:** Sizhe Tan & GPT-Obot  
-**Project:** Universal Intelligence Evolution and Relay Unit (UIERU)  
-**Status:** Research architecture and proposed specifications; experimental validation pending.
+## Versioning and correction policy
+
+- **Patch (`1.0.x`)**: editorial fixes, corrected links, metadata corrections, and non-substantive clarifications.
+- **Minor (`1.x.0`)**: additional research pieces, hypotheses, cases, figures, and compatible specification extensions.
+- **Major (`x.0.0`)**: material changes to central research definitions, comparison semantics, or specification contracts that require downstream review.
+- Substantive counter-evidence may require a revision even when the earlier statement was central to a published release. Preserve a traceable record rather than silently overwriting research history.
+
+## Citation
+
+Use `CITATION.cff` and the corresponding release record when available. Cite a version-specific DOI only after one has been assigned. For the latest working material, refer to the repository and identify the accessed version or commit.
