@@ -3,7 +3,7 @@
 **Project:** Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay (BUI-DSI)  
 **Authors:** Sizhe Tan & GPT-Obot  
 **Version:** 1.0.0 — Research proposal  
-**Date:** 2026-10-21  
+**Date:** 2026-10-25  
 **Status:** Open research agenda; candidate models and engineering contracts, not established universal results
 
 ## Abstract
@@ -11,12 +11,6 @@
 The Universal Intelligence Evolution and Relay Unit (UIERU) shifts Structural Intelligence (SI) research from relatively static, indexable components toward units whose evaluation, decisions, interactions, and internal organization may change with perspective, context, environment, and history. Existing localization mechanisms from the Structural Intelligence Framework (SIF) remain useful when a dynamic unit is viewed through stable structural attributes, but observing its live scoring and adaptation requires additional methodological discipline. This paper proposes **Perspective Masking** as a family of explicitly scoped observation and intervention operators, rather than a single operation that simply hides a scoring forest. It develops a minimal dynamic-unit model; distinguishes structural projection, observational filtering, execution intervention, and counterfactual reconstruction; defines masking contracts and provenance; examines algebraic properties and their failure modes; and proposes a practical observation architecture. The central objective is to recover comparable, queryable structural views without confusing a masked view with the behavior of the unmasked system. The paper closes with testable hypotheses, counterexamples, and an open research relay interface for mathematics, neuroscience, and engineering.
 
 **Keywords:** UIERU; dynamic structural intelligence; perspective masking; observation semantics; scoring forest; localization; intervention; provenance; temporal state; counter-evidence; structural relay
-
----
-
-![Fig-003-Perspective-Masking-Architecture.png](../figures/Fig-003-Perspective-Masking-Architecture.png)
-
----
 
 ## 1. Introduction: The Observation Problem After UIERU
 

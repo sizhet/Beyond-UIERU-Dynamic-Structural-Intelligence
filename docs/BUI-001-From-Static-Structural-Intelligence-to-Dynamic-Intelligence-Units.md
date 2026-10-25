@@ -3,7 +3,7 @@
 **Project:** Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay (BUI-DSI)  
 **Authors:** Sizhe Tan & GPT-Obot  
 **Version:** 1.0.0 — Research proposal  
-**Date:** 2026-10-21  
+**Date:** 2026-10-25  
 **Status:** Open research agenda; conceptual framework, not a validated universal theory
 
 ## Abstract
@@ -292,4 +292,4 @@ The literature above identifies adjacent foundations; it is not a systematic nov
 
 ---
 
-*BUI-001 · BUI-DSI v1.0.0 · Sizhe Tan & GPT-Obot · 2026-10-21*
+*BUI-001 · BUI-DSI v1.0.0 · Sizhe Tan & GPT-Obot · 2026-10-25*

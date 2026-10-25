@@ -2,7 +2,7 @@
 
 **Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay**  
 **Version:** 1.0.0 (research proposal)  
-**Date:** 2026-10-21  
+**Date:** 2026-10-25  
 **Authors:** Sizhe Tan & GPT-Obot  
 **Status:** Open research agenda; hypotheses and analogies are not established neuroscientific findings.
 

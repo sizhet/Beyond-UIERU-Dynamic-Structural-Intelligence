@@ -3,7 +3,7 @@
 **Project:** Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay (BUI-DSI)  
 **Version:** 1.0.0 — Research agenda and conceptual proposal  
 **Authors:** Sizhe Tan & GPT-Obot  
-**Date:** 2026-10-21  
+**Date:** 2026-10-25  
 **Status:** Open research proposal; definitions and hypotheses are provisional
 
 ## Abstract
@@ -123,7 +123,7 @@ interfaces:
   related_papers: ["BUI-002", "BUI-006"]
 provenance:
   authors: ["Sizhe Tan", "GPT-Obot"]
-  date: "2026-10-21"
+  date: "2026-10-25"
 ```
 
 The example illustrates a proposed interchange shape; it is not a completed, tested specification.
@@ -416,3 +416,12 @@ Tan, Sizhe, and GPT-Obot. (2026). *BUI-008: Open Research Relay and the Next Hor
 **Research status:** Conceptual framework, proposed interfaces, and open hypotheses. Not peer-reviewed; no mathematical or biological claims in this paper should be interpreted as experimentally validated without separate evidence.
 
 **License:** Refer to the repository's `LICENSE` file. No license is asserted by this document independently.
+
+---
+
+## 📚 DBM-SI Series Navigation
+
+See:\
+[./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md](./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md)
+
+---
