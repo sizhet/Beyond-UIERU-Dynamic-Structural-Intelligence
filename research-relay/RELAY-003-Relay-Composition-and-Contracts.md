@@ -2,7 +2,7 @@
 
 **Project:** Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay (BUI-DSI)  
 **Research Relay Piece:** RELAY-003  
-**Version:** 1.0.0 — 2026-10-21  
+**Version:** 1.0.0 — 2026-10-25  
 **Authors:** Sizhe Tan & GPT-Obot  
 **Status:** Open research agenda; candidate definitions and falsifiable propositions, not established theorems
 

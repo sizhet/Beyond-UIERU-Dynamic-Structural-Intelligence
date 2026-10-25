@@ -1,7 +1,7 @@
 # RELAY-005 — Open Structural Evolution
 
 **Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay (BUI-DSI)**  
-**Research Relay Piece · v1.0.0 · 2026-10-21**  
+**Research Relay Piece · v1.0.0 · 2026-10-25**  
 **Authors:** Sizhe Tan & GPT-Obot  
 **Status:** Open research agenda; proposed models and hypotheses, not established results  
 **Suggested repository path:** `research-relay/RELAY-005-Open-Structural-Evolution.md`
