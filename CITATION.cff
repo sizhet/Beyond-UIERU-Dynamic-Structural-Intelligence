@@ -3,7 +3,7 @@ message: >-
   If you use or discuss this research repository, please cite the version
   archived with its DOI when available.
 title: 'Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay'
-type: software
+type: generic
 authors:
   - family-names: Tan
     given-names: Sizhe
@@ -25,3 +25,4 @@ keywords:
   - research relay
   - behavioral equivalence
   - structural evolution
+doi: 10.5281/zenodo.23651690

@@ -208,6 +208,8 @@ To collaborate, begin with [RESEARCH-COLLABORATION.md](research-relay/RESEARCH-C
 **Citation metadata:** [CITATION.cff](CITATION.cff)  
 **Change history:** [CHANGELOG.md](CHANGELOG.md)
 
+DOI: 10.5281/zenodo.23651690
+
 ---
 
 ## 📚 DBM-SI Series Navigation
