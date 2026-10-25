@@ -203,7 +203,7 @@ To collaborate, begin with [RESEARCH-COLLABORATION.md](research-relay/RESEARCH-C
 **Authors:** Sizhe Tan & GPT-Obot  
 **Project:** *Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay*  
 **Release:** v1.0.0  
-**Repository:** https://github.com/sizhet/Structural-Intelligence-Framework  
+**Repository:** https://github.com/sizhet/Beyond-UIERU-Dynamic-Structural-Intelligence 
 **License:** [Apache License 2.0](LICENSE.txt)  
 **Citation metadata:** [CITATION.cff](CITATION.cff)  
 **Change history:** [CHANGELOG.md](CHANGELOG.md)
