@@ -329,4 +329,4 @@ Perspective Masking is proposed as a disciplined way to observe and experimental
 
 **Authors:** Sizhe Tan & GPT-Obot  
 **Project:** Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay  
-**License:** See repository `LICENSE`.
+**License:** See repository `LICENSE.txt`.

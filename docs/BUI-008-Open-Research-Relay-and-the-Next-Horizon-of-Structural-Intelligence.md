@@ -415,13 +415,13 @@ Tan, Sizhe, and GPT-Obot. (2026). *BUI-008: Open Research Relay and the Next Hor
 
 **Research status:** Conceptual framework, proposed interfaces, and open hypotheses. Not peer-reviewed; no mathematical or biological claims in this paper should be interpreted as experimentally validated without separate evidence.
 
-**License:** Refer to the repository's `LICENSE` file. No license is asserted by this document independently.
+**License:** Refer to the repository's `LICENSE.txt` file. No license is asserted by this document independently.
 
 ---
 
 ## 📚 DBM-SI Series Navigation
 
 See:\
-[./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md](./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md)
+[./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md](../docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md)
 
 ---
