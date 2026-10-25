@@ -198,6 +198,23 @@ The initial research program is authored by **Sizhe Tan & GPT-Obot**. Contributi
 
 To collaborate, begin with [RESEARCH-COLLABORATION.md](research-relay/RESEARCH-COLLABORATION.md), choose a bounded problem, record assumptions and provenance, and submit reproducible results—including counterexamples or negative results.
 
+## 13. Citation, License, and Release
+
+**Authors:** Sizhe Tan & GPT-Obot  
+**Project:** *Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay*  
+**Release:** v1.0.0  
+**Repository:** https://github.com/sizhet/Structural-Intelligence-Framework  
+**License:** [Apache License 2.0](LICENSE.txt)  
+**Citation metadata:** [CITATION.cff](CITATION.cff)  
+**Change history:** [CHANGELOG.md](CHANGELOG.md)
+
+---
+
+## 📚 DBM-SI Series Navigation
+
+See:\
+[./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md](./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md)
+
 ---
 
 **BUI-DSI thesis:** The next step is not merely to build more capable intelligence units, but to make dynamic intelligence **observable, comparable, composable, contestable, and openly evolvable**—while making the research process itself relayable.
