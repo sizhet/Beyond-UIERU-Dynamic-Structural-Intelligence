@@ -115,7 +115,7 @@ Priorities after v1.0.0 include formal semantics and counterexamples, executable
 Please use [`CITATION.cff`](CITATION.cff) to cite this version, and refer to the version-specific Zenodo DOI **once one has been assigned**. No DOI is asserted here.
 
 **Authors:** Sizhe Tan & GPT-Obot  
-**License metadata:** Apache-2.0 (confirm the repository contains a matching `LICENSE` file).  
+**License metadata:** Apache-2.0.  
 **Repository:** https://github.com/sizhet/Beyond-UIERU-Dynamic-Structural-Intelligence
 
 ---

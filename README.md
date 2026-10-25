@@ -71,7 +71,7 @@ For concrete research scenarios, begin with **[CASE-001](cases/CASE-001-Perspect
 
 For formal or experimental contributions, use the **[Research Relay problems](research-relay/)**, **[collaboration guide](research-relay/RESEARCH-COLLABORATION.md)**, and **[SPEC-004](specs/SPEC-004-Research-Relay-Piece-Contract.md)**.
 
-See also [START-HERE.md](START-HERE.md), [CONTENTS.md](CONTENTS.md), [GLOSSARY.md](GLOSSARY.md), and [FIGURE-INDEX.md](FIGURE-INDEX.md) as these navigation files are added to the release.
+See also [START-HERE.md](START-HERE.md), [CONTENTS.md](CONTENTS.md), [GLOSSARY.md](GLOSSARY.md), and [FIGURE-INDEX.md](FIGURE-INDEX.md).
 
 ## 4. Eight core papers
 
@@ -168,7 +168,7 @@ Beyond-UIERU-Dynamic-Structural-Intelligence/
 ├── CHANGELOG.md
 ├── CITATION.cff
 ├── .zenodo.json
-├── LICENSE
+├── LICENSE.txt
 ├── GitHub-Release-Notes-v1.0.0.md
 ├── ResearchGate-Description.txt
 └── BUI-DSI-v1.0.0-ResearchGate-Overview.pdf
@@ -194,7 +194,7 @@ Progress should be measured against **independent evidence and falsifiable crite
 
 ## 12. Collaboration and attribution
 
-The initial research program is authored by **Sizhe Tan & GPT-Obot**. Contributions from external researchers should be credited according to their actual work and the applicable venue, repository, and dataset policies. The repository's formal citation metadata, license, and DOI should be taken from the committed `CITATION.cff`, `LICENSE`, and published release records once available; **no DOI is asserted here before registration**.
+The initial research program is authored by **Sizhe Tan & GPT-Obot**. Contributions from external researchers should be credited according to their actual work and the applicable venue, repository, and dataset policies. The repository's formal citation metadata, license, and DOI should be taken from the committed `CITATION.cff`, `LICENSE.txt`, and published release records once available; **no DOI is asserted here before registration**.
 
 To collaborate, begin with [RESEARCH-COLLABORATION.md](research-relay/RESEARCH-COLLABORATION.md), choose a bounded problem, record assumptions and provenance, and submit reproducible results—including counterexamples or negative results.
 
