@@ -209,4 +209,4 @@ The central opportunity is to turn perspective masking from an informal engineer
 
 **Citation context:** BUI-DSI, v1.0.0, Research Relay Piece RELAY-001.  
 **Authors:** Sizhe Tan & GPT-Obot.  
-**License:** See repository `LICENSE` and release metadata.
+**License:** See repository `LICENSE.txt` and release metadata.

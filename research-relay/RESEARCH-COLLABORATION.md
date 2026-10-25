@@ -186,7 +186,7 @@ For self-modifying or tool-using agents, favor constrained sandboxes, explicit p
 
 When citing this repository, use the version-specific DOI after it has been issued; do not invent a DOI. Until then, cite the GitHub repository and the relevant document version. If the repository provides `CITATION.cff`, prefer its current metadata, checking that it matches the release.
 
-Proposals, formal statements, proofs, datasets, software, figures, and prose may have different licensing requirements. Check the repository `LICENSE` and individual artifact metadata. Do not assume that a software license automatically settles reuse rights for datasets, third-party figures, or external contributions. Where possible, contributors should state the applicable license explicitly.
+Proposals, formal statements, proofs, datasets, software, figures, and prose may have different licensing requirements. Check the repository `LICENSE.txt` and individual artifact metadata. Do not assume that a software license automatically settles reuse rights for datasets, third-party figures, or external contributions. Where possible, contributors should state the applicable license explicitly.
 
 ## 12. Research maturity and publication labels
 
