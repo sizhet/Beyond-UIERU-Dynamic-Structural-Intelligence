@@ -98,7 +98,7 @@ authors:
 maintainers:
   - "BUI-DSI research maintainers"
 created_at: "2026-10-21"
-updated_at: "2026-10-21"
+updated_at: "2026-10-25"
 problem:
   question: "Under what conditions do two observational masks commute?"
   scope: ["finite observation records", "typed projection operators"]
