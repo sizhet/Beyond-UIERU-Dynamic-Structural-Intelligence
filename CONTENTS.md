@@ -2,7 +2,7 @@
 
 **BUI-DSI · v1.0.0 · Repository table of contents**  
 **Authors:** Sizhe Tan & GPT-Obot  
-**Date:** 2026-10-21  
+**Date:** 2026-10-25  
 **Status:** Open research agenda; proposed models, interfaces, and testable questions.
 
 > **Navigation principle:** Follow the path from dynamic observation and perspective-aware comparison to conditional equivalence, Relay composition, structural evolution, and open research collaboration.

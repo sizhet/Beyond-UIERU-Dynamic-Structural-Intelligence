@@ -2,7 +2,7 @@
 
 **BUI-DSI · v1.0.0 · Reader's guide and research entry points**  
 **Authors:** Sizhe Tan & GPT-Obot  
-**Date:** 2026-10-21  
+**Date:** 2026-10-25  
 **Status:** Open research agenda; candidate models and proposed interfaces, not an established general theory.
 
 > **Begin with the research question, choose a perspective, and follow the evidence.**

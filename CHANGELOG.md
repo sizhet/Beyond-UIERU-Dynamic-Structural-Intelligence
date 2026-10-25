@@ -15,7 +15,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Export and review eight individual figure files, ensuring captions and links match the figure index.
 - Incorporate external research contributions, including negative results and revisions to assumptions.
 
-## [1.0.0] - 2026-10-21
+## [1.0.0] - 2026-10-25
 
 ### Added — Research foundation
 - Eight core papers in `docs/`:

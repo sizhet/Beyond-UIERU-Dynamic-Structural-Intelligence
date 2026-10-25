@@ -2,7 +2,7 @@
 
 **BUI-DSI · v1.0.0 · Open research agenda**  
 **Authors:** Sizhe Tan & GPT-Obot  
-**Date:** 2026-10-21  
+**Date:** 2026-10-25  
 **Research status:** Conceptual models, candidate formalizations, case studies, interface proposals, and falsifiable open problems. **Not** a validated general theory, completed implementation, or claim of biological equivalence.
 
 > **From static structural intelligence to dynamic, perspective-aware, composable intelligence units—and from research results to openly relayable research problems.**

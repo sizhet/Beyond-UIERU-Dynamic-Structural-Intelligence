@@ -3,7 +3,7 @@
 **Project:** BUI-DSI  
 **Version:** 1.0.0  
 **Authors:** Sizhe Tan & GPT-Obot  
-**Date:** 2026-10-21  
+**Date:** 2026-10-25  
 **Status:** Working research vocabulary; proposed terms and hypotheses are not established scientific standards.
 
 ## 1. Purpose and reading conventions

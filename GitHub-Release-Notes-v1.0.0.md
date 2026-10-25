@@ -3,7 +3,7 @@
 ## Beyond UIERU: Dynamic Structural Intelligence and Open Research Relay (BUI-DSI)
 
 **Version:** v1.0.0  
-**Release date:** 2026-10-21 (planned; update if published on another date)  
+**Release date:** 2026-10-25
 **Authors:** Sizhe Tan & GPT-Obot  
 **Repository:** https://github.com/sizhet/Beyond-UIERU-Dynamic-Structural-Intelligence  
 **Release type:** Initial open research framework / working-paper collection
