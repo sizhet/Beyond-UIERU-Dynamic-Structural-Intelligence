@@ -32,22 +32,22 @@ UIERU changes the focal object: instead of treating a capability as a static com
 
 For a candidate functional unit, define:
 
-\[
+$$
 U_t=(S_t,\Theta_t,\mathcal{I}_t,\mathcal{O}_t,\mathcal{R}_t),
-\]
+$$
 
 where \(S_t\) is latent or measured state, \(\Theta_t\) is an adaptable policy or evaluative configuration, \(\mathcal{I}_t\) and \(\mathcal{O}_t\) describe input/output relations, and \(\mathcal{R}_t\) describes interactions with other units or resources. This is a modeling choice, not an anatomical decomposition.
 
 A state-dependent behavioral model is:
 
-\[
+$$
 a_t\sim\pi_{\Theta_t}(\cdot\mid o_t,c_t,g_t,h_t),
-\]
+$$
 
-\[
+$$
 S_{t+1}\sim T(\cdot\mid S_t,a_t,o_t,c_t),\qquad
 \Theta_{t+1}=L(\Theta_t,S_t,a_t,r_t,h_t),
-\]
+$$
 
 where \(o_t\) is observation, \(c_t\) context, \(g_t\) goals or motivational constraints, \(h_t\) relevant history, and \(r_t\) feedback. These equations do not imply that biological brains implement explicit policy tables or reward scalars.
 
@@ -81,9 +81,9 @@ Anatomical structures can be comparatively stable while task-relevant functional
 
 Let \(N\) denote available neural resources and let \(B_t\subseteq N\) be a candidate functional boundary inferred under a specified task and measurement regime:
 
-\[
+$$
 B_t=\Phi(N,c_t,g_t,h_t,\mathcal{D}_{\le t}),
-\]
+$$
 
 where \(\mathcal{D}_{\le t}\) denotes evidence available through time \(t\). This equation is an inference framework, not a known biological law. The boundary may be overlapping, graded, and uncertain rather than a crisp set.
 
@@ -101,9 +101,9 @@ These operations must never be conflated. An apparent invariance under observati
 
 For matched trials, define a conditional behavioral contrast:
 
-\[
+$$
 \Delta_{p,q}(x)=\mathbb{E}[Y\mid do(P=p),X=x]-\mathbb{E}[Y\mid do(P=q),X=x],
-\]
+$$
 
 only where \(P\) is a well-defined manipulable experimental condition and the causal estimand is identifiable. For non-manipulable constructs, use descriptive conditional contrasts instead of \(do(\cdot)\). Outcome \(Y\) can be a decision, reaction time, trajectory feature, or neural summary, with explicit measurement units.
 
@@ -122,11 +122,11 @@ Each comparison node should carry a **comparison contract**: organism/species, t
 
 Two candidate functional organizations may be similar for one task yet differ under stress, new contexts, or prolonged learning. Define a task-scoped behavioral distance:
 
-\[
+$$
 d_{\mathcal{T},\mathcal{C}}(U,V)=
 \sup_{(\tau,c)\in\mathcal{T}\times\mathcal{C}}
 D\bigl(P_U(Y\mid\tau,c),P_V(Y\mid\tau,c)\bigr),
-\]
+$$
 
 where \(D\) is a specified divergence and \(\mathcal{T},\mathcal{C}\) are declared task and context sets. This is a *proposed metric-like comparison*, not necessarily a mathematical metric: the chosen divergence may fail symmetry or triangle inequality. Finite experimental coverage yields only bounded empirical evidence, not universal equivalence.
 

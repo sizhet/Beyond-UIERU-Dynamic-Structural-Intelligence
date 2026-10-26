@@ -24,9 +24,9 @@ This paper treats masking as a research instrument. It is not assumed to preserv
 
 Represent a UIERU abstractly as
 
-\[
+$$
 U=(I,K,X,\mathcal P,\mathcal A,S,T,R,L),
-\]
+$$
 
 where:
 
@@ -42,22 +42,22 @@ where:
 
 A discrete-time model, offered for tractability rather than biological fidelity, is
 
-\[
+$$
 (a_t,y_t)=\pi_U(x_t,p_t,c_t,e_t;\theta_t),
-\]
+$$
 
-\[
+$$
 x_{t+1}=T_U(x_t,a_t,e_t,f_t;\theta_t),\qquad
 \theta_{t+1}=L_U(\theta_t,x_t,a_t,f_t),
-\]
+$$
 
 where \(p_t\) is perspective, \(c_t\) context, \(e_t\) environment, \(f_t\) feedback, \(\theta_t\) evolving structural parameters, and \(y_t\) observable outputs. The model allows stochastic mechanisms by interpreting \(\pi_U,T_U,L_U\) as probability kernels.
 
 A **trace** is a time-indexed record of selected observable fields, for example
 
-\[
+$$
 \tau=(I,t,p_t,c_t,\widehat x_t,a_t,y_t,f_t,r_t,\nu_t)_{t=0}^{n},
-\]
+$$
 
 with \(r_t\) relay events and \(\nu_t\) version identifiers. The hat on \(\widehat x_t\) denotes a partial or estimated state, not privileged access to the true state.
 
@@ -81,9 +81,9 @@ The word *mask* is dangerously ambiguous unless its operational meaning is speci
 
 A projection \(M^{\mathrm{proj}}_F\) selects fields \(F\) from a fixed representation or recorded trace:
 
-\[
+$$
 M^{\mathrm{proj}}_F(\tau)=\tau|_F.
-\]
+$$
 
 It does not rerun the UIERU or alter the historical decision. This is the closest extension of traditional SIF structural localization.
 
@@ -126,15 +126,15 @@ Masks may be composed, but composition is meaningful only when the corresponding
 
 Define an observation request as
 
-\[
+$$
 q=(U,\mathcal P_q,\mathcal C_q,[t_0,t_1],m,\sigma),
-\]
+$$
 
 where \(m\) is a mask specification and \(\sigma\) an observation semantics tag. Its result is
 
-\[
+$$
 V_q=(D_q,\Gamma_q,\Omega_q),
-\]
+$$
 
 where \(D_q\) contains selected data, \(\Gamma_q\) provenance and experimental conditions, and \(\Omega_q\) limitations or uncertainty.
 
@@ -151,18 +151,18 @@ This preserves the investment in SIF localization while preventing dynamic trace
 
 Mathematical structure depends on mask semantics. For pure field projection onto sets \(F\) and \(G\), under a common immutable representation,
 
-\[
+$$
 M_F^{\mathrm{proj}}\circ M_G^{\mathrm{proj}}=M_{F\cap G}^{\mathrm{proj}},
-\]
+$$
 
 and therefore projection is idempotent and commutative under these assumptions. This is a standard property of projection, not a novel UIERU theorem.
 
 For interventions, analogous identities generally fail. If one intervention changes the score normalization and another freezes learning, their order can affect decisions and future state:
 
-\[
+$$
 M_A^{\mathrm{do}}\circ M_B^{\mathrm{do}}\ne
 M_B^{\mathrm{do}}\circ M_A^{\mathrm{do}}.
-\]
+$$
 
 Research questions include: Which restricted intervention families commute? Can a typed mask calculus reject invalid compositions? What properties of the original system survive masking? Can mask-induced changes be bounded?
 
@@ -172,9 +172,9 @@ We should distinguish **view equivalence**, **decision preservation**, **traject
 
 Given matched runs under perspectives \(p_i\) and \(p_j\), a candidate differential record is
 
-\[
+$$
 \Delta_{ij}=(\Delta S,\Delta A,\Delta\tau,\Delta L;\Gamma),
-\]
+$$
 
 where the components denote scoring differences, decision differences, trajectory differences, and learning/evolution differences; \(\Gamma\) records matching assumptions and provenance.
 

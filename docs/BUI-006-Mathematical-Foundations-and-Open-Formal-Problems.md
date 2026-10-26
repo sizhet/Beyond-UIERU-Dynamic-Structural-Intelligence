@@ -27,9 +27,9 @@ The proposed constructs are research abstractions. They are not claims that biol
 
 Let a dynamic intelligence unit be a tuple
 
-\[
+$$
 U=(X,A,Y,P,C,\Theta,\mathsf{step},\mathsf{observe},\mathsf{update},K).
-\]
+$$
 
 Here:
 
@@ -66,9 +66,9 @@ A counterfactual estimator \(\widehat{\mathsf{CF}}(U,I,e)\) estimates what might
 
 For pure projections defined as field restrictions \(M_S\) onto sets of observable fields \(S\), suitable typed composition can satisfy
 
-\[
+$$
 M_S\circ M_T=M_{S\cap T},\qquad M_S\circ M_S=M_S.
-\]
+$$
 
 These identities require a common underlying record space and consistent semantics. They should not be generalized to execution interventions, learned imputations, or aggregations without proof.
 
@@ -84,19 +84,19 @@ For fixed \(p\in P\), \(c\in C\), and horizon \(T\), let \(\mathsf{Law}_T(U;p,c)
 
 Define an observational pseudodistance
 
-\[
+$$
 d_T(U,V\mid p,c,M)=D\big(M_*\mathsf{Law}_T(U;p,c),M_*\mathsf{Law}_T(V;p,c)\big),
-\]
+$$
 
 where \(D\) is a stated probability-distribution distance, such as total variation where applicable. This can be zero for behaviorally distinct systems when the mask discards relevant information.
 
 For a domain \(\Omega\subseteq P\times C\), a conditional approximate equivalence criterion is
 
-\[
+$$
 U\approx_{\Omega,T,\varepsilon,M}V
 \quad\Longleftrightarrow\quad
 \sup_{(p,c)\in\Omega}d_T(U,V\mid p,c,M)\le\varepsilon.
-\]
+$$
 
 **Important:** Threshold-based approximate equivalence need not be transitive; therefore it is generally not an equivalence relation or a valid quotient partition. Exact zero-distance equivalence may be an equivalence relation under appropriate assumptions. For substitution in arbitrary environments, stronger contextual equivalence or (probabilistic) bisimulation conditions may be required.
 
@@ -106,17 +106,17 @@ U\approx_{\Omega,T,\varepsilon,M}V
 
 Define a comparison contract
 
-\[
+$$
 \Gamma=(\Omega,T,M,\Pi,\Sigma,E),
-\]
+$$
 
 where \(\Pi\) fixes input/action protocols, \(\Sigma\) specifies score calibration, and \(E\) records evidence and provenance.
 
 A perspective differential record may contain
 
-\[
+$$
 \Delta_\Gamma(U;p_1,p_2)=(\Delta_s,\Delta_a,\Delta_\tau,\Delta_\theta),
-\]
+$$
 
 representing scoring, decision, trajectory, and structural-update differences. Components may be undefined when calibration or alignment fails; missingness must not be silently replaced with zero.
 
@@ -128,9 +128,9 @@ A Perspective Differential Tree (PDT) is proposed as an *index* over such condit
 
 A query result should be modeled as a pair \((r,\rho)\), where \(r\) is a result and \(\rho\) records provenance, comparison conditions, and uncertainty. For a query operator \(Q\), ask whether
 
-\[
+$$
 Q(M(D))\stackrel{?}{=}M'(Q(D))
-\]
+$$
 
 for a compatible output mask \(M'\). The equality holds only under explicit query and mask restrictions; aggregation, joins, and predicates on hidden fields can break it.
 

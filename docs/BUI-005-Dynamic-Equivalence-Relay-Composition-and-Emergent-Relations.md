@@ -42,9 +42,9 @@ The framework is deliberately independent of any particular LLM, ANN, database, 
 
 Represent a unit as a labeled, probabilistic transition system with optional structural evolution:
 
-\[
+$$
 U=(X,A,O,P,C,\Theta,T,G,\mathsf{obs},\mathcal K).
-\]
+$$
 
 Here:
 
@@ -63,9 +63,9 @@ The model is an abstraction: some implementations will use deterministic transit
 
 A **comparison domain** is
 
-\[
+$$
 D=(\mathcal P,\mathcal C,\mathcal H,\mathcal E,\mathcal M,\tau),
-\]
+$$
 
 specifying allowed perspectives, contexts, initial histories, environments, masking/observation policy, and observation horizon. A comparison claim without \(D\) is underspecified.
 
@@ -93,17 +93,17 @@ Two units are contextually equivalent relative to a family of permitted relay en
 
 For an explicitly selected observable trajectory metric \(d_{\mathrm{tr}}\), define a candidate distance
 
-\[
+$$
  d_D(U,V)=\sup_{z\in D}\; \mathsf{Dist}\bigl(\mathcal L(\mathsf{obs}(\mathrm{Run}(U,z))),\mathcal L(\mathsf{obs}(\mathrm{Run}(V,z)))\bigr),
-\]
+$$
 
 where \(z\) is an admissible test configuration, \(\mathcal L\) denotes a trajectory distribution, and \(\mathsf{Dist}\) is a chosen distributional metric (for example, total variation or a Wasserstein metric when its assumptions hold).
 
 We may write
 
-\[
+$$
 U\approx_{D,\epsilon}V \quad\Longleftrightarrow\quad d_D(U,V)\le\epsilon.
-\]
+$$
 
 This **tolerance relation need not be transitive**: \(d(U,V)\le\epsilon\) and \(d(V,W)\le\epsilon\) imply at most \(d(U,W)\le2\epsilon\) under a triangle inequality. Therefore an \(\epsilon\)-similarity group must not automatically be called an equivalence class. Exact zero-distance classes, when the metric assumptions support them, are a different object.
 
@@ -126,9 +126,9 @@ A central open question is whether a useful **evolution-aware approximate bisimu
 
 Let
 
-\[
+$$
 U_A\otimes_R U_B
-\]
+$$
 
 represent a composition under relay protocol \(R\). The operator is *partial*: composition is defined only when required types, capabilities, permissions, timing constraints, and environmental assumptions are compatible.
 
@@ -147,9 +147,9 @@ A relay contract should specify:
 
 A tempting but generally invalid inference is
 
-\[
+$$
 \mathcal K(U_A)\land\mathcal K(U_B)\;\Rightarrow\;\mathcal K(U_A\otimes_R U_B).
-\]
+$$
 
 **Counterexample:** two individually safe units each retry failed messages indefinitely. A cyclic relay can create unbounded traffic despite each unit satisfying its local retry rule.
 
@@ -163,9 +163,9 @@ This is a research schema, not a universal theorem. The property (safety, livene
 
 Suppose \(U_A\) is replaced by \(U_B\) in environment \(E\). Substitution is justified only if
 
-\[
+$$
 \mathcal K\bigl(E[U_A]\bigr)\;\Longrightarrow\;\mathcal K\bigl(E[U_B]\bigr)
-\]
+$$
 
 holds for the declared contract and operating domain, or if the resulting degradation is explicitly bounded and accepted.
 
@@ -185,17 +185,17 @@ Similarity is evidence for substitution, never a blanket license to substitute.
 
 The next research granularity may be a relationship rather than a larger unit. Define a dynamic relation
 
-\[
+$$
 R_{ij}(t,p,c,h;E)
-\]
+$$
 
 between units \(U_i\) and \(U_j\), conditional on time, perspective, context, interaction history, and relay environment. Relations may include delegation, dependence, competition, complementarity, substitution, shared learning, and evaluation authority.
 
 Represent a population as a time-varying, typed, attributed multigraph:
 
-\[
+$$
 \mathcal G_t=(\mathcal U_t,\mathcal R_t,\mathcal A_t),
-\]
+$$
 
 where nodes are evolving units, edges are observed or proposed relations, and attributes record contracts, evidence, confidence, and validity intervals.
 

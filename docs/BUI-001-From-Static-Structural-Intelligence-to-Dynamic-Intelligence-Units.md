@@ -54,9 +54,9 @@ A useful first model separates a unit's relatively persistent specification from
 
 Let
 
-\[
+$$
 U = (K, X, \mathcal{P}, \mathcal{A}, \mathcal{R}, F, G, \Gamma),
-\]
+$$
 
 where:
 
@@ -71,13 +71,13 @@ where:
 
 At step \(t\), a simplified operational view is
 
-\[
+$$
 (a_t, y_t) = G(K_t, x_t, p_t, c_t, e_t),
-\]
+$$
 
-\[
+$$
 (x_{t+1}, K_{t+1}) = F_{\Gamma}(K_t, x_t, a_t, y_t, r_t, e_t),
-\]
+$$
 
 where \(p_t\) denotes perspective, \(c_t\) context, \(e_t\) environment, \(r_t\) relay input/output, and \(y_t\) an observable outcome or trace. The equations are schematic; they do not imply that all implementations expose these variables or evolve on discrete time steps.
 
@@ -119,9 +119,9 @@ Other useful restrictions include structural masks, scoring masks, temporal mask
 
 For masks \(M_P\) and \(M_Q\), one may ask whether
 
-\[
+$$
 M_P(M_Q(U)) = M_{P\cap Q}(U).
-\]
+$$
 
 This equality can hold for suitable pure projections. It need not hold for interventions that alter actions or state. Idempotence, commutativity, associativity, and behavior preservation are **candidate properties to investigate**, not established UIERU theorems.
 
@@ -143,9 +143,9 @@ A practical route to dynamic localization is to retain mature database and query
 
 A conceptual query can be written as
 
-\[
+$$
 Q(U,p,c,e,h,m),
-\]
+$$
 
 where \(m\) identifies the mask and \(h\) identifies relevant history or a bounded history representation.
 
@@ -166,9 +166,9 @@ Ordinary SQL can query **recorded** behavior; counterfactual behavior requires a
 
 For a bounded family of contexts \(\mathcal C\), perspectives \(\mathcal P\), and a specified observation metric \(d\), one may propose
 
-\[
+$$
 U_i \approx_{\mathcal P,\mathcal C,\varepsilon} U_j
-\]
+$$
 
 when their relevant observed behaviors differ by no more than \(\varepsilon\) under a stated protocol. The definition is incomplete until the behavior space, sampling regime, metric, time horizon, and confidence criteria are fixed.
 

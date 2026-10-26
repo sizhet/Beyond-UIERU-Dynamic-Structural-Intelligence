@@ -249,7 +249,7 @@
 71. Universal Control Planes and Scoring Tree/Forest/Folding for Structural Intelligence - \
     From Generalized Scoring Intelligence to Hybrid AI, Governed Structural RSI, and Open-Ended Structural Evolution \
     Repository: https://github.com/sizhet/Universal-Control-Planes-and-Scoring-Folding        
-    
+  
 72. Subjective Structural Intelligence (SSI) - \
     From Scoring Forests to Perception, Agency, Self-Models, and Worldview Evolution \
     Repository: https://github.com/sizhet/Subjective-Structural-Intelligence    
@@ -261,7 +261,7 @@
 74. Beyond the LLM Boundary - \
     Structural Hybrid Intelligence, Representation Barriers, and the Future of AI Architecture \
     Repository: https://github.com/sizhet/Beyond-the-LLM-Boundary-Structural-Hybrid-Intelligence     
-    
+
 75. Structural Intelligence Framework (SIF) - \
     An Open Architecture for Intelligence Localization, Composition, Governance, and Structural Growth \
     Repository: https://github.com/sizhet/Structural-Intelligence-Framework

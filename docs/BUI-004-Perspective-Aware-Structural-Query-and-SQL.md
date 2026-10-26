@@ -40,9 +40,9 @@ A database query does not establish causation. It retrieves or computes from the
 
 Let an observation be
 
-\[
+$$
 o = (u, v, p, c, e, h, t, m, a, s, r, \pi),
-\]
+$$
 
 where \(u\) is unit identity; \(v\) its structural version; \(p\) the perspective configuration; \(c\) the task/context; \(e\) the environment; \(h\) a history/state reference; \(t\) observation time; \(m\) the masking protocol; \(a\) the selected action or capability; \(s\) scoring evidence; \(r\) the outcome; and \(\pi\) provenance.
 
@@ -59,9 +59,9 @@ This is a conceptual tuple, not a demand that every field fit in one physical ta
 
 Define a conceptual query as
 
-\[
+$$
 Q(D; P,C,E,H,T,M,K),
-\]
+$$
 
 where \(D\) is the dataset and \(K\) is an explicit **comparison contract** specifying comparability requirements. The output should include both records and the conditions under which they were selected.
 
@@ -266,9 +266,9 @@ Each node should preserve comparison keys, provenance, observation windows, samp
 
 For an observational projection \(M\) and query \(Q\), one may ask whether
 
-\[
+$$
 Q(M(D)) = M'(Q(D)).
-\]
+$$
 
 This equality is not generally valid. It depends on which columns or events are hidden, whether the query aggregates, whether filtering changes join cardinalities, and how missing data is handled. Related research questions include:
 

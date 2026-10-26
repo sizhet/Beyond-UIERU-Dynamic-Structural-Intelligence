@@ -37,17 +37,17 @@ The proposed tree representation may be insufficient when dependencies are cycli
 
 Let a dynamic intelligence unit be described by a stable structural descriptor \(D_U\) and an evolving internal state \(x_t\). Let \(p_t\) denote a perspective or evaluation configuration, \(c_t\) task context, \(e_t\) environment, \(r_t\) incoming relay information, and \(h_t\) relevant history. A provisional transition model is
 
-\[
+$$
 (a_t,y_t,x_{t+1}) \sim K_U(\cdot\mid x_t,p_t,c_t,e_t,r_t,h_t),
-\]
+$$
 
 where \(a_t\) is a selected action and \(y_t\) an observable outcome. The stochastic kernel accommodates deterministic systems as a special case. History may be summarized in state only if an adequate state representation exists; otherwise the model must retain explicit history dependence.
 
 An observation record is
 
-\[
+$$
 o=(u,v,t,p,c,e,h,r,m,q,s,a,y,\tau,\pi),
-\]
+$$
 
 where \(u\) is unit identity, \(v\) version, \(m\) mask specification, \(q\) candidate set, \(s\) available score data, \(\tau\) trajectory trace, and \(\pi\) provenance. Not all fields need be visible; missingness must be represented rather than silently imputed.
 
@@ -79,9 +79,9 @@ These operations must not be conflated. In particular, an observational view may
 
 For comparable candidates \(k\), define
 
-\[
+$$
 \Delta S_k(p_i,p_j\mid z)=S_U(k,p_i\mid z)-S_U(k,p_j\mid z),
-\]
+$$
 
 where \(z\) denotes the fixed comparison conditions. This subtraction requires scores to share a calibrated scale. Otherwise rank changes, pairwise preferences, or normalized distributions are safer comparisons.
 
@@ -93,9 +93,9 @@ Define \(\Delta A\) as a relation between actions selected under two perspective
 
 For trajectories \(\tau_i\) and \(\tau_j\), define
 
-\[
+$$
 \Delta T=d_{\tau}(\tau_i,\tau_j\mid z),
-\]
+$$
 
 where \(d_{\tau}\) is a declared comparison function: event edit distance, aligned state divergence, outcome regret, or temporal-logic property mismatch. Different metrics capture different notions of behavioral difference; no universal metric is assumed.
 
@@ -103,9 +103,9 @@ where \(d_{\tau}\) is a declared comparison function: event edit distance, align
 
 For state or structure update operators \(L_U\), compare the post-experience states or their future observable behavior:
 
-\[
+$$
 \Delta L=d_L\big(L_U(x,p_i,\xi_i),L_U(x,p_j,\xi_j)\big).
-\]
+$$
 
 If internal states are inaccessible, use future probe tasks to estimate a behavioral change instead. Learning differentials must distinguish exposure differences from update-mechanism differences.
 
@@ -205,10 +205,10 @@ WHERE perspective_a = 'cost'
 
 A small differential over selected perspectives may support **bounded behavioral similarity**, but not universal equivalence. Define a conditional distance
 
-\[
+$$
 d_{\mathcal P,\mathcal C,H}(U,V)
 =\mathbb E_{z\sim\mu}\left[d_B(B_U(z),B_V(z))\right],
-\]
+$$
 
 for a declared test distribution \(\mu\) and behavioral metric \(d_B\). The result depends on sampling, coverage, and observability. Low average distance does not guarantee safety on rare but critical contexts. Worst-case constraints and explicit counterexample searches may be required before relay substitution.
 
