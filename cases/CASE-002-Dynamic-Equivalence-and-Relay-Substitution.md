@@ -70,9 +70,9 @@ A successful comparison must state whether the perspective is merely observed, r
 
 Represent a dynamic unit by
 
-\[
+$$
 U=(X,A,Y,P,C,H,T,O,L,K),
-\]
+$$
 
 where \(X\) is its internal state space, \(A\) the admissible actions, \(Y\) the observable outputs, \(P\) perspectives, \(C\) contexts, \(H\) history, \(T\) the state transition rule, \(O\) the observation rule, \(L\) the learning/update rule, and \(K\) its externally declared contract. This is a **proposed abstraction**, not a canonical definition of UIERU.
 
@@ -80,17 +80,17 @@ Let \(\tau(U,z)\) denote an observable execution trace for test condition \(z=(p
 
 For a bounded test domain \(D\), define an empirical discrepancy:
 
-\[
+$$
 \widehat d_D(U_A,U_B)=\sum_{z\in D}w_z\,d_\tau\bigl(\tau(U_A,z),\tau(U_B,z)\bigr),
-\]
+$$
 
 with nonnegative weights \(w_z\) summing to one and a trace discrepancy function \(d_\tau\) declared in advance. A small empirical discrepancy **does not prove** equivalence outside \(D\). Further, if \(d_\tau\) is not a metric, \(\widehat d_D\) should not be called a mathematical distance.
 
 A practical bounded substitution judgment is:
 
-\[
-\operatorname{SubOK}(U_B\mid U_A,R,D,K,\epsilon)
-\]
+$$
+operatorname{SubOK}(U_B\mid U_A,R,D,K,\epsilon)
+$$
 
 meaning that, when \(U_B\) replaces \(U_A\) in relay environment \(R\), the specified contract checks pass over \(D\) within declared tolerances \(\epsilon\). This is a **test predicate**, not a universal theorem.
 
@@ -146,9 +146,9 @@ Each differential node should retain its comparison contract, data provenance, m
 
 Let \(R[U]\) denote the enclosing coordinator workflow with answer unit \(U\). A local interface match does not imply:
 
-\[
+$$
 K(R[U_A])\Rightarrow K(R[U_B]).
-\]
+$$
 
 A valid replacement argument must include assumptions about input admissibility, tool permissions, timing, escalation, and downstream handling. For example, the coordinator may assume that `confidence=high` is issued only with resolvable evidence. A replacement violating this assumption can cause an incorrect final delivery even if its response schema is valid.
 

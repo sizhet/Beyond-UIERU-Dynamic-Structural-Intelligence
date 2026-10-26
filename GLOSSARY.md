@@ -8,7 +8,7 @@
 
 ## 1. Purpose and reading conventions
 
-This glossary establishes consistent terminology across [the core papers](CONTENTS.md), [research cases](CONTENTS.md#3-research-cases--cases), [Research Relay Pieces](CONTENTS.md#4-open-research-relay--research-relay), and [specifications](CONTENTS.md#5-specifications--specs). It distinguishes established disciplinary terminology from **project-defined** abstractions and **candidate** mathematical relations. The same word may have a narrower meaning inside a comparison contract than in ordinary language.
+This glossary establishes consistent terminology across [the core papers](CONTENTS.md), [research cases](CONTENTS.md#3-research-cases--cases), [Research Relay Pieces](CONTENTS.md#4-open-research-relay--research-relay), and [specifications](CONTENTS.md). It distinguishes established disciplinary terminology from **project-defined** abstractions and **candidate** mathematical relations. The same word may have a narrower meaning inside a comparison contract than in ordinary language.
 
 **Terminology status:**
 - **Established:** widely used concept in mathematics, computer science, machine learning, or neuroscience; local use is described here without asserting a new discovery.
@@ -33,9 +33,9 @@ A proposed composable intelligence-unit abstraction that can be observed through
 
 A UIERU treated as a stateful, time-evolving process rather than a fixed function. An illustrative observation-level representation is
 
-\[
+$$
 U_t = (I_t, C_t, P_t, V_t, A_t, F_t, H_t, E_t, G_t),
-\]
+$$
 
 where identity/boundary, context, perspective, valuation, action, feedback, history, evolution state, and governance are **modeling coordinates**, not a universally required physical decomposition. The symbols are local to this illustration and do not override schemas in SPEC-001.
 
@@ -303,9 +303,9 @@ A framework for transferring unresolved problems, formal models, assumptions, ev
 
 A portable, versioned research object with six core fields: **Problem (P), Model (M), Hypotheses (H), Evidence (E), Validation (V), Interfaces (I)**, plus optional or extended **Governance (G)** and **Lineage (L)**. A compact representation is
 
-\[
+$$
 R = (P,M,H,E,V,I;G,L).
-\]
+$$
 
 The notation describes a contract shape, not a theorem about research processes. See [SPEC-004](specs/SPEC-004-Research-Relay-Piece-Contract.md).
 

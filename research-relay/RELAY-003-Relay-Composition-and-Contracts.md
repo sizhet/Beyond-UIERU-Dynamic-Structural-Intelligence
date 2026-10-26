@@ -49,9 +49,9 @@ The worked cases are **CASE-001** (perspective-masked model selection), **CASE-0
 
 Let a unit be a labeled, possibly stochastic, evolving transition system:
 
-\[
+$$
 U=(X,I,O,P,\Theta,\mathcal{A},T,G,E),
-\]
+$$
 
 where:
 
@@ -66,11 +66,11 @@ where:
 
 A transition may be represented as
 
-\[
+$$
 (x_{t+1},o_t,e_t)\sim T_U(x_t,i_t,p_t,\theta_t),
 \qquad
 \theta_{t+1}\sim G_U(\theta_t,e_t).
-\]
+$$
 
 The notation intentionally permits deterministic or stochastic implementations. A real implementation must specify which state and event fields are observable, which are private, and which are required by contract.
 
@@ -78,9 +78,9 @@ The notation intentionally permits deterministic or stochastic implementations. 
 
 Define a relay event as a structured record
 
-\[
+$$
 r=(id,s,d,k,v,c,p,a,h,\pi,\tau),
-\]
+$$
 
 with sender \(s\), destination \(d\), message kind \(k\), payload \(v\), context reference \(c\), perspective \(p\), authority or capability token \(a\), history reference \(h\), provenance \(\pi\), and logical time \(\tau\).
 
@@ -103,9 +103,9 @@ The record is a **candidate interface**, not a universal wire format. Implementa
 
 For unit \(U\), propose the contract
 
-\[
+$$
 C_U=(\Sigma_I,\Sigma_O,A,G,S,L,R,V,\Pi),
-\]
+$$
 
 where \(\Sigma_I,\Sigma_O\) are input/output schemas, \(A\) environmental assumptions, \(G\) guarantees, \(S\) safety invariants, \(L\) liveness or progress obligations, \(R\) resource and latency bounds, \(V\) validity conditions (context, perspective, version, time horizon), and \(\Pi\) provenance and audit obligations.
 
@@ -113,14 +113,14 @@ A contract should specify **what may be relied upon**, not simply describe how a
 
 ### 5.1 Satisfaction
 
-Let \(\operatorname{Traces}(U\mid A,V)\) denote the unit's observable traces under admissible assumptions and validity conditions. A simple trace-level contract satisfaction relation is:
+Let \(operatorname{Traces}(U\mid A,V)\) denote the unit's observable traces under admissible assumptions and validity conditions. A simple trace-level contract satisfaction relation is:
 
-\[
+$$
 U\models C_U
 \iff
-\forall\rho\in\operatorname{Traces}(U\mid A,V):
+\forall\rho\in operatorname{Traces}(U\mid A,V):
 \rho\models G\land S\land L\land R\land\Pi.
-\]
+$$
 
 This is a schematic definition. For probabilistic or unbounded systems, the quantifiers and interpretation of latency, liveness, and evidence must be refined. Statistical evidence cannot silently substitute for universal proof.
 
@@ -132,17 +132,17 @@ A receiving unit must not infer that an upstream score is comparable to its own 
 
 For compatible output and input types, write
 
-\[
+$$
 U_1\;\mathbin{\triangleright_R}\;U_2
-\]
+$$
 
 for a directed relay from \(U_1\) to \(U_2\) through relay adapter \(R\). The adapter may validate types, redact fields, map perspectives, enforce permissions, and record provenance.
 
 A composed system is a graph
 
-\[
+$$
 \mathcal N=(\{U_i\}_{i\in N},\{R_{ij}\}_{(i,j)\in E},C_{\mathcal N}),
-\]
+$$
 
 with a system contract \(C_{\mathcal N}\) defined over **externally observable network traces**, not merely the conjunction of node contracts.
 
@@ -170,14 +170,14 @@ For a sequential pair \(U_1\triangleright_R U_2\), a sufficient-condition resear
 
 Then a **particular** system guarantee \(G_{12}\) may follow:
 
-\[
+$$
 \bigl(U_1\models C_1\bigr)\land
 \bigl(U_2\models C_2\bigr)\land
-\operatorname{Compat}(C_1,R,C_2)
-\land\operatorname{SideConditions}
+operatorname{Compat}(C_1,R,C_2)
+\land operatorname{SideConditions}
 \Rightarrow
 (U_1\triangleright_R U_2)\models G_{12}.
-\]
+$$
 
 **Research status:** This is a proof-obligation schema, not a theorem. The necessary side conditions depend on the operational semantics, concurrency model, fairness assumptions, and guarantee language.
 
@@ -185,11 +185,11 @@ Then a **particular** system guarantee \(G_{12}\) may follow:
 
 A tempting claim is
 
-\[
+$$
 (U_1\triangleright U_2)\triangleright U_3
 \equiv
 U_1\triangleright(U_2\triangleright U_3).
-\]
+$$
 
 This may hold for a carefully defined abstract message-passing semantics with compatible adapters and no hidden side effects. It can fail operationally if grouping changes batching, retry logic, scheduling, privacy filtering, scoring normalization, or resource allocation.
 
@@ -203,22 +203,22 @@ Write \(C'\preceq C\) when a replacement contract is a valid refinement of the o
 
 The familiar intuition is:
 
-\[
+$$
 A_C\Rightarrow A_{C'},\qquad
 G_{C'}\Rightarrow G_C,
-\]
+$$
 
 with all implications interpreted over compatible trace domains and with temporal, authority, and provenance constraints included. These formulas are **not sufficient by themselves** for arbitrary evolving systems.
 
 **Open problem C2:** Determine conditions for contextual substitutability:
 
-\[
+$$
 U'\preceq_{C,V}U
 \Longrightarrow
 \mathcal N[U']\models C_{\mathcal N}
 \quad\text{whenever}\quad
 \mathcal N[U]\models C_{\mathcal N}.
-\]
+$$
 
 Here \(\mathcal N[\cdot]\) is a network context with one designated replaceable position. This implication is a conjectured target requiring an explicit semantics and proof.
 
@@ -238,11 +238,11 @@ Propose a governed update transaction:
 
 A possible temporal invariant is:
 
-\[
-\Box\bigl(\operatorname{Active}(U,v)
+$$
+\Box\bigl(operatorname{Active}(U,v)
 \Rightarrow
-\operatorname{Approved}(v,C,V)\bigr),
-\]
+operatorname{Approved}(v,C,V)\bigr),
+$$
 
 where \(\Box\) means “always” in the selected temporal logic. Approval is an operational condition, not proof that every future trace is safe.
 
@@ -324,13 +324,13 @@ These counterexamples are **designed scenarios**, not reports of measured incide
 
 Consider a research workflow:
 
-\[
+$$
 U_{\text{retrieval}}
 \triangleright
 U_{\text{analysis}}
 \triangleright
 U_{\text{review}}.
-\]
+$$
 
 - Retrieval must attach source identifiers, timestamps, and access permissions.
 - Analysis may synthesize hypotheses but must preserve attribution and uncertainty.

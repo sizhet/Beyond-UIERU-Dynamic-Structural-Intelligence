@@ -17,17 +17,17 @@ A dynamic Universal Intelligence Evolution and Relay Unit (UIERU) is considered 
 
 Let a candidate dynamic unit be represented by
 
-\[
+$$
 U_t=(S_t, C_t, P_t, F_t, K_t, H_t, G_t),
-\]
+$$
 
 where \(S\) denotes observable state, \(C\) context, \(P\) perspective or valuation configuration, \(F\) behavioral transition mechanism, \(K\) interface contracts, \(H\) history/evidence, and \(G\) governance constraints. This is a **proposed modeling convention**, not a universal ontology.
 
 A comparison contract is
 
-\[
+$$
 \Gamma=(\mathcal T,\mathcal C,\mathcal P,\mathcal H,\mathcal O,T,\epsilon,\mathcal E),
-\]
+$$
 
 specifying task distribution, context, perspective, permitted histories, observation mapping, horizon, tolerance, and evidence requirements. Write \(U\sim_{\Gamma}V\) only for an equivalence claim explicitly tied to \(\Gamma\).
 

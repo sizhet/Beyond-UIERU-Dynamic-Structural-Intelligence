@@ -57,9 +57,9 @@ Identifiers MUST be unique within a declared namespace. Versioned objects MUST N
 
 A dynamic observation is modeled as
 
-\[
+$$
  o=(u,v,t,c,p,h,a,y,f,e,g,m),
-\]
+$$
 
 where \(u\) is unit identity, \(v\) version, \(t\) time/window, \(c\) context, \(p\) perspective, \(h\) bounded history reference, \(a\) action or decision, \(y\) outcome, \(f\) feedback, \(e\) evidence, \(g\) governance state, and \(m\) observation mode.
 
@@ -77,9 +77,9 @@ All timestamps MUST declare time zone or UTC offset; intervals SHOULD be half-op
 
 A comparison is represented by
 
-\[
+$$
  C=(U_A,U_B,P,K,H,W,O,M,A,\epsilon,E,V),
-\]
+$$
 
 with units/versions \(U_A,U_B\), perspective \(P\), context constraints \(K\), history constraints \(H\), window \(W\), observables \(O\), observation modes \(M\), alignment rule \(A\), tolerance policy \(\epsilon\), evidence requirements \(E\), and validation policy \(V\).
 
@@ -100,33 +100,33 @@ A differential is a typed claim about two aligned observations, traces, or bound
 
 ### 6.1 Scoring differential
 
-\[
+$$
  \Delta_S= S_{P}(U_B\mid K,H)-S_{P}(U_A\mid K,H).
-\]
+$$
 
 The score scale, direction, calibration, and normalization MUST be recorded. Scores on incomparable scales MUST NOT be subtracted without an explicit conversion with evidence.
 
 ### 6.2 Decision differential
 
-\[
+$$
  \Delta_D = d\bigl(\pi_B(K,H,P),\pi_A(K,H,P)\bigr),
-\]
+$$
 
 where \(d\) is a declared decision-distance function. A categorical mismatch, probability divergence, and ranked-choice displacement are different measures and MUST be labeled accordingly. A score change need not imply a decision change.
 
 ### 6.3 Trajectory differential
 
-\[
+$$
  \Delta_T = D_T\bigl(\tau_B[W],\tau_A[W]\bigr),
-\]
+$$
 
 where \(\tau\) is an observable execution trace and \(D_T\) is a declared alignment and distance measure. The metric MAY include output quality, latency, resource usage, safety events, and contract violations, but its dimensions and weights MUST be explicit.
 
 ### 6.4 Learning differential
 
-\[
+$$
  \Delta_L = D_L\bigl(\mathcal{B}_{B,t_1:t_2},\mathcal{B}_{A,t_1:t_2}\bigr),
-\]
+$$
 
 where \(\mathcal{B}\) denotes a specified behavior or structural property over an evaluation sequence. A learning claim MUST include a before/after protocol, evidence of a persistent update or change, and controls against context leakage and measurement drift. Repeated execution or growing logs alone MUST NOT be labeled learning.
 
@@ -190,9 +190,9 @@ A zero measured differential is not automatically equivalence. A small estimated
 
 A conditional equivalence claim MAY take the form
 
-\[
+$$
  U_A \approx_{P,K,H,W,O,\epsilon,E} U_B.
-\]
+$$
 
 Such a claim MUST specify its comparison contract, empirical or formal evidence, uncertainty, and validity interval. Substitutability requires additional interface, safety, resource, governance, and composition constraints, as developed in RELAY-002 and RELAY-003.
 
@@ -410,9 +410,9 @@ The mask contract MUST be versioned. If a mask changes the selection population,
 
 For a Relay graph \(G=(V,E)\), local differential records MAY be associated with nodes and edges. A system-level claim requires an explicit aggregation rule:
 
-\[
+$$
  \Delta_G = \mathcal{A}(\{\Delta_v\},\{\Delta_e\},K,P,W),
-\]
+$$
 
 where \(\mathcal{A}\) is a documented composition operator, not presumed additive. Local performance gains can be offset by coordination costs, latency tails, safety failures, or contract violations. A PASQ engine SHOULD support tracing a system-level finding back to constituent unit and Relay observations.
 

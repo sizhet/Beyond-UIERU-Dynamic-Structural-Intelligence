@@ -35,9 +35,9 @@ A relay is successful when a receiving investigator can identify what remains un
 
 Define an RRP as
 
-\[
+$$
 R = (P, M, H, E, V, I; G, L),
-\]
+$$
 
 where the six core components are:
 
@@ -184,9 +184,9 @@ A claim MUST NOT be promoted from `candidate_proposition` to `proved_result` mer
 
 Each hypothesis SHOULD identify a validity domain
 
-\[
+$$
 \mathcal{D} = (\mathcal{C}, \mathcal{P}, \mathcal{H}, T, \mathcal{O}, \epsilon),
-\]
+$$
 
 where context, perspective, history, time horizon, observation semantics, and tolerance are explicitly represented when relevant. Claims of dynamic equivalence MUST state which observations are compared and which variations are allowed. A validity-domain change MUST trigger re-evaluation or a new version of the claim.
 

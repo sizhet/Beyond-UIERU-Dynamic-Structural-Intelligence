@@ -28,27 +28,27 @@ No claim is made that a particular LLM internally uses an explicit scoring fores
 
 Let a unit state at step `t` be
 
-\[
+$$
 X_t=(G_t, H_t, K_t, E_t),
-\]
+$$
 
 where `G` is its structural configuration, `H` its evidence history, `K` its policy and scoring configuration, and `E` its environment description. Given task `q`, perspective `p`, and candidate set `C`, the unit computes
 
-\[
+$$
 s_p(c\mid q,X_t)=\sum_{j\in\{cost,quality,latency\}}w_{p,j}r_j(c\mid q,X_t),
-\]
+$$
 
 and selects
 
-\[
+$$
 a_t=\arg\max_{c\in C}s_p(c\mid q,X_t).
-\]
+$$
 
 The observed transition is
 
-\[
+$$
 (X_{t+1},o_t)=T(X_t,q,p,a_t,\xi_t),
-\]
+$$
 
 with `o` denoting measured outcomes and `ξ` uncontrolled environmental factors. A score is a decision input, not a verified measure of real-world success.
 
@@ -114,9 +114,9 @@ Each record should carry `mask_mode`, `state_snapshot_id`, `policy_version`, `ev
 
 For two perspectives `p` and `p'`:
 
-\[
+$$
 \Delta S_{p,p'}(c)=s_p(c)-s_{p'}(c).
-\]
+$$
 
 For candidate A, `P-cost` minus `P-quality` is `88.0 - 73.0 = 15.0`. Such differences are meaningful only because the same normalized scoring dimensions and candidate evidence are used.
 
@@ -124,9 +124,9 @@ For candidate A, `P-cost` minus `P-quality` is `88.0 - 73.0 = 15.0`. Such differ
 
 Define
 
-\[
+$$
 \Delta D_{p,p'}=\mathbf{1}[a_p\ne a_{p'}].
-\]
+$$
 
 Here every pair among the three perspectives has a different selected candidate. Score changes need not always produce decision changes; this is a counterexample to equating scoring differential with decision differential.
 

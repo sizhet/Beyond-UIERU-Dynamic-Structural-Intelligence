@@ -44,25 +44,25 @@ These are *motivations for hypotheses*, not evidence that any particular UIERU m
 
 Let an organism be studied under task environment \(e_t\), measured context \(c_t\), latent or estimated internal state \(z_t\), action \(a_t\), observation \(o_t\), and history \(h_t\). A candidate descriptive model is
 
-\[
+$$
  z_{t+1} \sim T_\theta(z_{t+1}\mid z_t,o_t,a_t,c_t,e_t),
  \qquad
  a_t \sim \pi_\theta(a_t\mid z_t,c_t,h_t).
-\]
+$$
 
 A *perspective* \(p\) denotes a declared analytic question, for example reward sensitivity, threat avoidance, uncertainty reduction, or energy expenditure. A perspective-conditioned observational map is
 
-\[
+$$
  y_t^{(p)}=M_p(o_{0:t},a_{0:t},c_{0:t},\hat z_{0:t};\mathcal A_p),
-\]
+$$
 
 where \(\mathcal A_p\) records measurement and modeling assumptions. \(M_p\) is a **researcher's transformation of data** unless an actual intervention is specified. It is not assumed to be a biological operator.
 
 A UIERU-like *functional unit* is provisionally a tuple
 
-\[
+$$
  U=(B, I, V, D, F, L, R, \Gamma),
-\]
+$$
 
 where \(B\) is a candidate boundary, \(I\) inputs, \(V\) valuation or task-dependent prioritization, \(D\) decision dynamics, \(F\) feedback, \(L\) learning, \(R\) interactions with other units, and \(\Gamma\) the validity conditions of the description. No one-to-one correspondence with neurons or regions is implied.
 
@@ -136,11 +136,11 @@ A PDT node should contain a contrast definition, effect estimate, uncertainty in
 
 Two biological subjects, sessions, or candidate functional organizations may yield similar action distributions while relying on different neural mechanisms. Define a task-scoped behavioral discrepancy:
 
-\[
+$$
  d_{\mathcal C,p,H}(A,B)
  = \mathbb E_{x\sim\mathcal C}
  \left[D\big(P_A(\tau_{0:H}\mid x,p),P_B(\tau_{0:H}\mid x,p)\big)\right],
-\]
+$$
 
 where \(\mathcal C\) specifies context distribution, \(H\) a time horizon, \(\tau\) a behavioral trajectory, and \(D\) a declared divergence or distance. This is a **candidate metric or pseudometric**, depending on \(D\) and the model class; metric properties are not assumed.
 

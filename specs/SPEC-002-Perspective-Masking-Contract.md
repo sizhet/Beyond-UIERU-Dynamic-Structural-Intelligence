@@ -82,27 +82,27 @@ The contract MUST select exactly one primary `operator_type`. A pipeline MAY con
 
 Let an observation domain be \(\mathcal O\), perspective descriptors \(\Pi\), and a view domain \(\mathcal V\). A read-only perspective projection can be represented as
 
-\[
+$$
 P_{\pi}:\mathcal O\rightarrow\mathcal V_{\pi}, \qquad \pi\in\Pi.
-\]
+$$
 
 For a stateful system with hidden state \(x_t\), context \(c_t\), history \(h_t\), and policy \(\mu\), a separate intervention operator may alter transition or policy semantics:
 
-\[
+$$
 x_{t+1}\sim T(x_t,a_t,c_t),\quad a_t\sim\mu(x_t,c_t,h_t),
-\]
+$$
 
-\[
+$$
 I_a(T,\mu,x_t)=(T',\mu',x'_t).
-\]
+$$
 
 These expressions are **candidate modeling abstractions**. They do not imply that a given UIERU exposes an identifiable state-space model or that an observation projection uniquely determines its behavior.
 
 A mask contract is represented conceptually by
 
-\[
+$$
 \mathrm{PMC}=(\mathrm{id},\mathrm{type},\mathrm{scope},\pi,\mathrm{params},\mathrm{lineage},\mathrm{authority},\mathrm{claims},\mathrm{tests}).
-\]
+$$
 
 This tuple is an organizational definition, not a theorem.
 

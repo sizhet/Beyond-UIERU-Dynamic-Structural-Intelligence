@@ -31,15 +31,15 @@ This piece complements `docs/BUI-002-Perspective-Masking-and-Dynamic-Structural-
 
 Let a dynamic intelligence unit be represented by a labeled, possibly stochastic transition system
 
-\[
+$$
 \mathcal U=(S,A,O,P,C,\Theta,K,G,s_0),
-\]
+$$
 
 where `S` is the state space, `A` actions, `O` observations, `P` perspectives, `C` contexts, `Θ` structural configurations, `K(s',o\mid s,a,p,c,\theta)` a transition/observation kernel, `G` an optional structure-update rule, and `s₀` an initial-state distribution or state. A finite execution trace is
 
-\[
+$$
 \tau=(s_0,p_0,c_0,a_0,o_1,s_1,\ldots,s_T).
-\]
+$$
 
 A **recorded evidence object** is `e=(τ, metadata, provenance, missingness)`; metadata may include time, version, evaluator, scoring scale, and relay dependencies. An **observation mask** `M_m : E → V_m` produces a typed view from recorded evidence. A **system intervention** `I_m : U → U_m` changes operational semantics; a **counterfactual reconstruction** `R_m(e, model)` estimates unobserved outcomes under explicit assumptions. These three maps must not share a single unqualified equality sign.
 
@@ -55,11 +55,11 @@ A cross-mask comparison requires at minimum: task definition, context support, c
 
 Fix an immutable evidence universe `E` with a common schema. For a set of retained fields `F`, let `π_F(e)` be the projection retaining only fields in `F`. With compatible schemas and ordinary projection semantics:
 
-\[
+$$
 \pi_F(\pi_G(e))=\pi_{F\cap G}(e), \qquad
 \pi_F\circ\pi_G=\pi_G\circ\pi_F, \qquad
 \pi_F^2=\pi_F.
-\]
+$$
 
 These identities are valid **only under the stated projection interpretation** (including compatible handling of identifiers and metadata). They are not claims about arbitrary perspective masking.
 
@@ -75,9 +75,9 @@ A provenance-preserving view can be represented as `(π_F(e), m, source_id, omit
 
 Let `I_p` suppress a scoring branch and renormalize remaining weights. Let `I_q` change the candidate-action set. The order may change the selected action:
 
-\[
+$$
 I_p(I_q(\mathcal U))\ne I_q(I_p(\mathcal U)).
-\]
+$$
 
 Likewise, freezing learning before a decision may differ from freezing it after feedback. Interventions alter the transition kernel, potentially creating histories that never occurred in the original system. A mask that is passive for a database query may be active for a live agent. Every algebraic claim must therefore specify its semantic domain.
 

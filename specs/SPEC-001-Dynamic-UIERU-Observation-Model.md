@@ -59,17 +59,17 @@ Levels are **capability profiles**, not intelligence rankings. A valid O1 observ
 
 Let a unit be represented abstractly as
 
-\[
+$$
 U_t = (I_t, B_t, C_t, P_t, F_t, H_t, G_t),
-\]
+$$
 
 where \(I\) is interface identity, \(B\) is the behavioral implementation or composition, \(C\) is the contract set, \(P\) is perspective/scoring configuration, \(F\) is feedback/evaluator configuration, \(H\) is history, and \(G\) is governance. These are **analytical categories**, not a claim that every implementation stores seven literal objects.
 
 An observation is
 
-\[
-O_t = \operatorname{Observe}(U_t, X_t, K_t, M_t, W_t; E_t),
-\]
+$$
+O_t = operatorname{Observe}(U_t, X_t, K_t, M_t, W_t; E_t),
+$$
 
 where \(X_t\) is a task/input, \(K_t\) a context, \(M_t\) a perspective or observation mask, \(W_t\) an observation window, and \(E_t\) the observation environment and instrumentation. The observed record is generally a **partial projection** of the underlying system.
 
@@ -200,11 +200,11 @@ A claim's provenance MUST survive downstream Relay when the claim is reused. Cou
 
 A dynamic observation MAY participate in an evolution chain:
 
-\[
+$$
 O_t \xrightarrow{\text{feedback}} E_t
 \xrightarrow{\text{candidate revision}} U_{t+1}
 \xrightarrow{\text{validation}} O_{t+1}.
-\]
+$$
 
 This is a **possible workflow**, not a guarantee that feedback produces learning. `lineage` SHOULD capture:
 

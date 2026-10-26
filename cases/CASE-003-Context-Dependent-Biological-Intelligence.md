@@ -41,9 +41,9 @@ The environment and observable food cue are held constant for paired comparisons
 
 Let the context at time `t` be:
 
-\[
+$$
 C_t=(h_t,r_t,e_t,q_t),
-\]
+$$
 
 where `h` is hunger, `r` is estimated threat, `e` is external sensory evidence, and `q` is the current task or contingency. History `H_t` summarizes prior outcomes and learned expectations.
 
@@ -53,24 +53,24 @@ A *perspective* `P_t` is an **analytical construct** representing the current we
 
 Define an abstract unit:
 
-\[
+$$
 U_t=(S_t,P_t,\mathcal A,V_t,\pi_t,L_t,R_t),
-\]
+$$
 
 with internal state `S`, perspective `P`, candidate actions `A`, valuation function `V`, policy `π`, learning operator `L`, and interaction/relay interface `R`.
 
 A minimal decision loop is:
 
-\[
+$$
 O_t\rightarrow \widehat C_t\rightarrow P_t\rightarrow V_t(a\mid S_t,\widehat C_t,P_t)
 \rightarrow A_t\rightarrow O_{t+1}\rightarrow S_{t+1}.
-\]
+$$
 
 The notation is a *modeling convenience*. Biological valuation, context inference, and action selection may occur concurrently, recursively, or without separable stages. A more general transition model is:
 
-\[
+$$
 p(S_{t+1},A_t\mid S_t,O_t,H_t),
-\]
+$$
 
 which does not require a serial pipeline.
 
@@ -105,9 +105,9 @@ Define four distinct comparison layers:
 
 **Valuation differential:** differences in estimated action values under matched evidence and specified context.
 
-\[
+$$
 \Delta V(a)=V(a\mid P_1,C,H)-V(a\mid P_2,C,H).
-\]
+$$
 
 **Decision differential:** whether the chosen action or action distribution changes. Equal actions do not imply equal values.
 
@@ -170,18 +170,18 @@ A research question is whether **conditional coordination patterns**, rather tha
 
 A useful starting point is a partially observed controlled stochastic process:
 
-\[
+$$
 S_{t+1}\sim T_\theta(\cdot\mid S_t,A_t,C_t),\qquad
 A_t\sim \pi_\theta(\cdot\mid O_{\le t},H_t).
-\]
+$$
 
 The UIERU-like decomposition is one candidate parameterization of `T` and `π`, not a new biological law. Relevant mathematical connections include partially observable Markov decision processes, dynamical systems, state-space models, causal inference, and approximate behavioral equivalence.
 
 Two models that produce similar choices under one context need not be interchangeable under new contexts or perturbations. Define an evaluation domain `D` and compare predictive distributions using a prespecified distance `d`:
 
-\[
+$$
 d_D(U_i,U_j) = \mathbb E_{x\sim D}\left[d\bigl(p_i(\cdot\mid x),p_j(\cdot\mid x)\bigr)\right].
-\]
+$$
 
 This is a candidate metric-like quantity; whether it satisfies metric axioms depends on the choice of `d` and model representation.
 
