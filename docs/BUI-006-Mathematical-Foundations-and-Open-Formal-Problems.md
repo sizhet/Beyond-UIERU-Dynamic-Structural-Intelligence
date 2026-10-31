@@ -85,7 +85,7 @@ For fixed $p\in P$, $c\in C$, and horizon $T$, let $\mathsf{Law}_T(U;p,c)$ denot
 Define an observational pseudodistance
 
 $$
-d_T(U,V\mid p,c,M)=D\big(M_*\mathsf{Law}_T(U;p,c),M_*\mathsf{Law}_T(V;p,c)\big),
+d_T(U,V\mid p,c,M)=D\big(M_{\mathsf{Law}_T}(U;p,c),M_{\mathsf{Law}_T}(V;p,c)\big),
 $$
 
 where $D$ is a stated probability-distribution distance, such as total variation where applicable. This can be zero for behaviorally distinct systems when the mask discards relevant information.
