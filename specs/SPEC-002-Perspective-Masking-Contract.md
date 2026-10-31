@@ -67,26 +67,26 @@ The contract MUST select exactly one primary `operator_type`. A pipeline MAY con
 
 | Type | Symbol (illustrative) | Input → output | Causal claim permitted? |
 |---|---|---|---|
-| `OBSERVATION_PROJECTION` | \(P_{\pi}\) | record → view | No |
-| `FIELD_FILTER` | \(F_S\) | record → subset | No |
-| `TEMPORAL_AGGREGATION` | \(A_W\) | event stream → summary | No |
-| `PERSPECTIVE_RESCORING` | \(R_{\pi}\) | evidence/score inputs → derived scores | No, absent intervention |
-| `DETERMINISTIC_REPLAY` | \(D_{h}\) | frozen snapshot + inputs → replay trace | Only within replay assumptions |
-| `SIMULATION` | \(S_{m}\) | model + scenario → synthetic trace | No real-world causal identification |
-| `SANDBOX_INTERVENTION` | \(I_{a}\) | sandbox state → modified state/trace | Limited to tested intervention |
-| `COUNTERFACTUAL_ESTIMATE` | \(C_{m,a}\) | causal/model assumptions → estimate | Only conditional on identified model assumptions |
+| `OBSERVATION_PROJECTION` | $P_{\pi}$ | record → view | No |
+| `FIELD_FILTER` | $F_S$ | record → subset | No |
+| `TEMPORAL_AGGREGATION` | $A_W$ | event stream → summary | No |
+| `PERSPECTIVE_RESCORING` | $R_{\pi}$ | evidence/score inputs → derived scores | No, absent intervention |
+| `DETERMINISTIC_REPLAY` | $D_{h}$ | frozen snapshot + inputs → replay trace | Only within replay assumptions |
+| `SIMULATION` | $S_{m}$ | model + scenario → synthetic trace | No real-world causal identification |
+| `SANDBOX_INTERVENTION` | $I_{a}$ | sandbox state → modified state/trace | Limited to tested intervention |
+| `COUNTERFACTUAL_ESTIMATE` | $C_{m,a}$ | causal/model assumptions → estimate | Only conditional on identified model assumptions |
 
 `PERSPECTIVE_RESCORING` changes a *derived evaluation*, not necessarily the unit's actual policy. An implementation MUST distinguish `predicted_decision` from `observed_decision`.
 
 ## 6. Minimal Mathematical Semantics
 
-Let an observation domain be \(\mathcal O\), perspective descriptors \(\Pi\), and a view domain \(\mathcal V\). A read-only perspective projection can be represented as
+Let an observation domain be $\mathcal O$, perspective descriptors $\Pi$, and a view domain $\mathcal V$. A read-only perspective projection can be represented as
 
 $$
 P_{\pi}:\mathcal O\rightarrow\mathcal V_{\pi}, \qquad \pi\in\Pi.
 $$
 
-For a stateful system with hidden state \(x_t\), context \(c_t\), history \(h_t\), and policy \(\mu\), a separate intervention operator may alter transition or policy semantics:
+For a stateful system with hidden state $x_t$, context $c_t$, history $h_t$, and policy $\mu$, a separate intervention operator may alter transition or policy semantics:
 
 $$
 x_{t+1}\sim T(x_t,a_t,c_t),\quad a_t\sim\mu(x_t,c_t,h_t),
@@ -268,7 +268,7 @@ Counterfactual results SHOULD be rejected or downgraded when relevant confoundin
 
 ## 14. Composition Semantics
 
-For typed operators \(M_1:A\to B\) and \(M_2:B\to C\), composition \(M_2\circ M_1\) is defined only if the output domain, provenance, scope, authority, and semantic mode of \(M_1\) satisfy the input requirements of \(M_2\).
+For typed operators $M_1:A\to B$ and $M_2:B\to C$, composition $M_2\circ M_1$ is defined only if the output domain, provenance, scope, authority, and semantic mode of $M_1$ satisfy the input requirements of $M_2$.
 
 A composition contract MUST record operator order and MUST reject implicit coercion between read-only views and interventions. It SHOULD retain intermediate lineage so information loss can be attributed to a specific stage.
 
@@ -282,13 +282,13 @@ The following are **candidate propositions for investigation**, not guaranteed a
 
 | Property | Candidate claim | Conditions / failure modes |
 |---|---|---|
-| Idempotence | \(P(P(o))=P(o)\) | Same projection definition, stable schema and domain; fails for stateful transformations or repeated rounding |
-| Commutativity | \(M_1M_2=M_2M_1\) | Potentially for independent read-only filters; fails for ordered interventions and many aggregations |
-| Associativity | \((M_3M_2)M_1=M_3(M_2M_1)\) | Typed pure operators with fixed semantics; may fail if intermediate effects or policies differ |
-| Refinement | \(P_{\pi_1}\preceq P_{\pi_2}\) | Requires an explicit information ordering and reconstruction relation |
-| Query preservation | \(Q(P(o))=Q(o)\) | Only for queries whose sufficient inputs and semantics are preserved |
-| Decision preservation | \(d(P(o))=d(o)\) | Requires decision-relevant sufficiency, stable policy, and matched context/history |
-| Relay compatibility | \(R(P(o))\sim P(R(o))\) | Requires typed relay semantics and no hidden feedback or side-effect mismatch |
+| Idempotence | $P(P(o))=P(o)$ | Same projection definition, stable schema and domain; fails for stateful transformations or repeated rounding |
+| Commutativity | $M_1M_2=M_2M_1$ | Potentially for independent read-only filters; fails for ordered interventions and many aggregations |
+| Associativity | $(M_3M_2)M_1=M_3(M_2M_1)$ | Typed pure operators with fixed semantics; may fail if intermediate effects or policies differ |
+| Refinement | $P_{\pi_1}\preceq P_{\pi_2}$ | Requires an explicit information ordering and reconstruction relation |
+| Query preservation | $Q(P(o))=Q(o)$ | Only for queries whose sufficient inputs and semantics are preserved |
+| Decision preservation | $d(P(o))=d(o)$ | Requires decision-relevant sufficiency, stable policy, and matched context/history |
+| Relay compatibility | $R(P(o))\sim P(R(o))$ | Requires typed relay semantics and no hidden feedback or side-effect mismatch |
 
 A proof about a pure projection MUST NOT be extended without justification to learning, feedback, policy changes, or interventions.
 

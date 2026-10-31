@@ -61,7 +61,7 @@ $$
  o=(u,v,t,c,p,h,a,y,f,e,g,m),
 $$
 
-where \(u\) is unit identity, \(v\) version, \(t\) time/window, \(c\) context, \(p\) perspective, \(h\) bounded history reference, \(a\) action or decision, \(y\) outcome, \(f\) feedback, \(e\) evidence, \(g\) governance state, and \(m\) observation mode.
+where $u$ is unit identity, $v$ version, $t$ time/window, $c$ context, $p$ perspective, $h$ bounded history reference, $a$ action or decision, $y$ outcome, $f$ feedback, $e$ evidence, $g$ governance state, and $m$ observation mode.
 
 This tuple is an analytical shorthand; it does not imply that every field is observable or that every system exposes internal state. Records SHOULD reference SPEC-001 observations rather than duplicate potentially inconsistent copies.
 
@@ -81,7 +81,7 @@ $$
  C=(U_A,U_B,P,K,H,W,O,M,A,\epsilon,E,V),
 $$
 
-with units/versions \(U_A,U_B\), perspective \(P\), context constraints \(K\), history constraints \(H\), window \(W\), observables \(O\), observation modes \(M\), alignment rule \(A\), tolerance policy \(\epsilon\), evidence requirements \(E\), and validation policy \(V\).
+with units/versions $U_A,U_B$, perspective $P$, context constraints $K$, history constraints $H$, window $W$, observables $O$, observation modes $M$, alignment rule $A$, tolerance policy $\epsilon$, evidence requirements $E$, and validation policy $V$.
 
 **Admissibility** is a separate result, not a property assumed by creating a comparison.
 
@@ -112,7 +112,7 @@ $$
  \Delta_D = d\bigl(\pi_B(K,H,P),\pi_A(K,H,P)\bigr),
 $$
 
-where \(d\) is a declared decision-distance function. A categorical mismatch, probability divergence, and ranked-choice displacement are different measures and MUST be labeled accordingly. A score change need not imply a decision change.
+where $d$ is a declared decision-distance function. A categorical mismatch, probability divergence, and ranked-choice displacement are different measures and MUST be labeled accordingly. A score change need not imply a decision change.
 
 ### 6.3 Trajectory differential
 
@@ -120,7 +120,7 @@ $$
  \Delta_T = D_T\bigl(\tau_B[W],\tau_A[W]\bigr),
 $$
 
-where \(\tau\) is an observable execution trace and \(D_T\) is a declared alignment and distance measure. The metric MAY include output quality, latency, resource usage, safety events, and contract violations, but its dimensions and weights MUST be explicit.
+where $\tau$ is an observable execution trace and $D_T$ is a declared alignment and distance measure. The metric MAY include output quality, latency, resource usage, safety events, and contract violations, but its dimensions and weights MUST be explicit.
 
 ### 6.4 Learning differential
 
@@ -128,11 +128,11 @@ $$
  \Delta_L = D_L\bigl(\mathcal{B}_{B,t_1:t_2},\mathcal{B}_{A,t_1:t_2}\bigr),
 $$
 
-where \(\mathcal{B}\) denotes a specified behavior or structural property over an evaluation sequence. A learning claim MUST include a before/after protocol, evidence of a persistent update or change, and controls against context leakage and measurement drift. Repeated execution or growing logs alone MUST NOT be labeled learning.
+where $\mathcal{B}$ denotes a specified behavior or structural property over an evaluation sequence. A learning claim MUST include a before/after protocol, evidence of a persistent update or change, and controls against context leakage and measurement drift. Repeated execution or growing logs alone MUST NOT be labeled learning.
 
 ### 6.5 Cross-family relationships
 
-The schema does not assume implications such as \(\Delta_S\neq 0\Rightarrow\Delta_D\neq 0\), \(\Delta_D\neq0\Rightarrow\Delta_T\neq0\), or \(\Delta_T\neq0\Rightarrow\Delta_L\neq0\). These implications require additional assumptions and may be false.
+The schema does not assume implications such as $\Delta_S\neq 0\Rightarrow\Delta_D\neq 0$, $\Delta_D\neq0\Rightarrow\Delta_T\neq0$, or $\Delta_T\neq0\Rightarrow\Delta_L\neq0$. These implications require additional assumptions and may be false.
 
 ## 7. Canonical Differential Record
 
@@ -408,13 +408,13 @@ The mask contract MUST be versioned. If a mask changes the selection population,
 
 ## 14. Relay and Compositional Queries
 
-For a Relay graph \(G=(V,E)\), local differential records MAY be associated with nodes and edges. A system-level claim requires an explicit aggregation rule:
+For a Relay graph $G=(V,E)$, local differential records MAY be associated with nodes and edges. A system-level claim requires an explicit aggregation rule:
 
 $$
  \Delta_G = \mathcal{A}(\{\Delta_v\},\{\Delta_e\},K,P,W),
 $$
 
-where \(\mathcal{A}\) is a documented composition operator, not presumed additive. Local performance gains can be offset by coordination costs, latency tails, safety failures, or contract violations. A PASQ engine SHOULD support tracing a system-level finding back to constituent unit and Relay observations.
+where $\mathcal{A}$ is a documented composition operator, not presumed additive. Local performance gains can be offset by coordination costs, latency tails, safety failures, or contract violations. A PASQ engine SHOULD support tracing a system-level finding back to constituent unit and Relay observations.
 
 ## 15. Evolution-Aware Queries
 

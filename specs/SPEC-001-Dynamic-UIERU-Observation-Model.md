@@ -63,15 +63,15 @@ $$
 U_t = (I_t, B_t, C_t, P_t, F_t, H_t, G_t),
 $$
 
-where \(I\) is interface identity, \(B\) is the behavioral implementation or composition, \(C\) is the contract set, \(P\) is perspective/scoring configuration, \(F\) is feedback/evaluator configuration, \(H\) is history, and \(G\) is governance. These are **analytical categories**, not a claim that every implementation stores seven literal objects.
+where $I$ is interface identity, $B$ is the behavioral implementation or composition, $C$ is the contract set, $P$ is perspective/scoring configuration, $F$ is feedback/evaluator configuration, $H$ is history, and $G$ is governance. These are **analytical categories**, not a claim that every implementation stores seven literal objects.
 
 An observation is
 
 $$
-O_t = operatorname{Observe}(U_t, X_t, K_t, M_t, W_t; E_t),
+O_t = \mathrm{Observe}(U_t, X_t, K_t, M_t, W_t; E_t),
 $$
 
-where \(X_t\) is a task/input, \(K_t\) a context, \(M_t\) a perspective or observation mask, \(W_t\) an observation window, and \(E_t\) the observation environment and instrumentation. The observed record is generally a **partial projection** of the underlying system.
+where $X_t$ is a task/input, $K_t$ a context, $M_t$ a perspective or observation mask, $W_t$ an observation window, and $E_t$ the observation environment and instrumentation. The observed record is generally a **partial projection** of the underlying system.
 
 An observation MAY refer to a counterfactual, but **a predicted counterfactual is not an observed outcome**. See §8.
 
@@ -387,7 +387,7 @@ A PDT comparison MUST declare a **comparison contract** covering task equivalenc
 
 ## 16. Differential Categories
 
-For comparable records \(O_a\) and \(O_b\), define candidate differential categories:
+For comparable records $O_a$ and $O_b$, define candidate differential categories:
 
 - **Scoring differential:** changed metric/evaluator outcomes under declared calibration.
 - **Decision differential:** changed selected action under a common decision context.
