@@ -21,7 +21,7 @@ $$
 U_t=(S_t, C_t, P_t, F_t, K_t, H_t, G_t),
 $$
 
-where \(S\) denotes observable state, \(C\) context, \(P\) perspective or valuation configuration, \(F\) behavioral transition mechanism, \(K\) interface contracts, \(H\) history/evidence, and \(G\) governance constraints. This is a **proposed modeling convention**, not a universal ontology.
+where $S$ denotes observable state, $C$ context, $P$ perspective or valuation configuration, $F$ behavioral transition mechanism, $K$ interface contracts, $H$ history/evidence, and $G$ governance constraints. This is a **proposed modeling convention**, not a universal ontology.
 
 A comparison contract is
 
@@ -29,7 +29,7 @@ $$
 \Gamma=(\mathcal T,\mathcal C,\mathcal P,\mathcal H,\mathcal O,T,\epsilon,\mathcal E),
 $$
 
-specifying task distribution, context, perspective, permitted histories, observation mapping, horizon, tolerance, and evidence requirements. Write \(U\sim_{\Gamma}V\) only for an equivalence claim explicitly tied to \(\Gamma\).
+specifying task distribution, context, perspective, permitted histories, observation mapping, horizon, tolerance, and evidence requirements. Write $U\sim_{\Gamma}V$ only for an equivalence claim explicitly tied to $\Gamma$.
 
 **Priority:** P0 = foundational and immediately actionable; P1 = important after P0 semantics; P2 = exploratory or dependent on stronger evidence. Priority is a research-planning recommendation, not a scientific ranking.
 
@@ -46,7 +46,7 @@ specifying task distribution, context, perspective, permitted histories, observa
 
 ### OQ-002 — When do masking operators commute, compose, or become idempotent? [P0]
 
-**Question.** Which restricted classes of masks satisfy \(M_aM_b=M_bM_a\), \(M^2=M\), or associative composition, and which do not?
+**Question.** Which restricted classes of masks satisfy $M_aM_b=M_bM_a$, $M^2=M$, or associative composition, and which do not?
 
 **Dependencies:** OQ-001.  
 **Approach:** Prove conditional propositions for pure projections; construct counterexamples for rescoring and interventions.  
@@ -113,7 +113,7 @@ specifying task distribution, context, perspective, permitted histories, observa
 
 ### OQ-009 — Which notion of dynamic equivalence is appropriate for UIERUs? [P0]
 
-**Question.** How do finite-trace similarity, distributional distance, approximate bisimulation, and contract substitutability differ under \(\Gamma\)?
+**Question.** How do finite-trace similarity, distributional distance, approximate bisimulation, and contract substitutability differ under $\Gamma$?
 
 **Dependencies:** RELAY-002, CASE-002.  
 **Approach:** Define each relation, show implications under explicit assumptions, and produce non-implication counterexamples.  
@@ -122,7 +122,7 @@ specifying task distribution, context, perspective, permitted histories, observa
 
 ### OQ-010 — How can an equivalence claim remain calibrated under distribution shift? [P0]
 
-**Question.** When should a previously accepted \(U\sim_\Gamma V\) claim be weakened, expired, or revoked?
+**Question.** When should a previously accepted $U\sim_\Gamma V$ claim be weakened, expired, or revoked?
 
 **Dependencies:** OQ-009, evidence provenance.  
 **Approach:** Monitor drift, validity domains, and sequential evidence thresholds.  
@@ -339,7 +339,7 @@ The waves may proceed in parallel when prerequisites are met. No timeline or res
 
 **Package A — Perspective-masked model selection.** Use fixed task sets, versioned model configurations, multiple perspectives, paired replays, and separate score/decision/trajectory/learning fields. Report uncertainty and operational cost. Links: OQ-001–008; CASE-001.
 
-**Package B — Relay substitution.** Compare candidate units under a declared \(\Gamma\), insert them into the same relay graph, and test safety, latency, behavior, and drift. Links: OQ-009–016; CASE-002.
+**Package B — Relay substitution.** Compare candidate units under a declared $\Gamma$, insert them into the same relay graph, and test safety, latency, behavior, and drift. Links: OQ-009–016; CASE-002.
 
 **Package C — RSI/UIERU governance.** Instrument a bounded self-improvement workflow; compare independent evaluator outcomes, auditability, and governance overhead. Links: OQ-017–022. Do not treat structural transparency as proof of internal neural interpretability.
 
