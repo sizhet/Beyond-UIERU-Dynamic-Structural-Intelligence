@@ -87,7 +87,7 @@ where $z$ denotes the fixed comparison conditions. This subtraction requires sco
 
 ### 6.2 Decision differential
 
-Define $\Delta A$ as a relation between actions selected under two perspectives. It can encode same/different choice, top-$k$ overlap, action distance, or a divergence between action distributions. Score differences need not produce decision differences.
+Define $\Delta A$ as a relation between actions selected under two perspectives. It can encode same/different choice, top-k overlap, action distance, or a divergence between action distributions. Score differences need not produce decision differences.
 
 ### 6.3 Trajectory differential
 
