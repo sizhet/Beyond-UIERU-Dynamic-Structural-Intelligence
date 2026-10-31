@@ -36,7 +36,7 @@ $$
 U_t=(S_t,\Theta_t,\mathcal{I}_t,\mathcal{O}_t,\mathcal{R}_t),
 $$
 
-where \(S_t\) is latent or measured state, \(\Theta_t\) is an adaptable policy or evaluative configuration, \(\mathcal{I}_t\) and \(\mathcal{O}_t\) describe input/output relations, and \(\mathcal{R}_t\) describes interactions with other units or resources. This is a modeling choice, not an anatomical decomposition.
+where $S_t$ is latent or measured state, $\Theta_t$ is an adaptable policy or evaluative configuration, $\mathcal{I}_t$ and $\mathcal{O}_t$ describe input/output relations, and $\mathcal{R}_t$ describes interactions with other units or resources. This is a modeling choice, not an anatomical decomposition.
 
 A state-dependent behavioral model is:
 
@@ -49,7 +49,7 @@ S_{t+1}\sim T(\cdot\mid S_t,a_t,o_t,c_t),\qquad
 \Theta_{t+1}=L(\Theta_t,S_t,a_t,r_t,h_t),
 $$
 
-where \(o_t\) is observation, \(c_t\) context, \(g_t\) goals or motivational constraints, \(h_t\) relevant history, and \(r_t\) feedback. These equations do not imply that biological brains implement explicit policy tables or reward scalars.
+where $o_t$ is observation, $c_t$ context, $g_t$ goals or motivational constraints, $h_t$ relevant history, and $r_t$ feedback. These equations do not imply that biological brains implement explicit policy tables or reward scalars.
 
 A *Perspective* in SI can be operationalized as a declared evaluative condition or family of conditions; biological motivation, task rules, attention, and bodily state may influence this condition but are not automatically identical to it.
 
@@ -79,13 +79,13 @@ Brains support recurrent and distributed communication across circuits. SI Relay
 
 Anatomical structures can be comparatively stable while task-relevant functional coalitions change. Consequently, a biological counterpart of a UIERU, if useful at all, might be a **temporarily assembled functional organization**, not a persistent, localized anatomical object.
 
-Let \(N\) denote available neural resources and let \(B_t\subseteq N\) be a candidate functional boundary inferred under a specified task and measurement regime:
+Let $N$ denote available neural resources and let $B_t\subseteq N$ be a candidate functional boundary inferred under a specified task and measurement regime:
 
 $$
 B_t=\Phi(N,c_t,g_t,h_t,\mathcal{D}_{\le t}),
 $$
 
-where \(\mathcal{D}_{\le t}\) denotes evidence available through time \(t\). This equation is an inference framework, not a known biological law. The boundary may be overlapping, graded, and uncertain rather than a crisp set.
+where $\mathcal{D}_{\le t}$ denotes evidence available through time $t$. This equation is an inference framework, not a known biological law. The boundary may be overlapping, graded, and uncertain rather than a crisp set.
 
 **Research problem:** Under what observational or intervention criteria can a functional unit be identified reproducibly? Proposed criteria include predictive sufficiency, causal contribution, relative autonomy, stability over a task window, and usefulness for transfer across tasks. These criteria may conflict.
 
@@ -105,7 +105,7 @@ $$
 \Delta_{p,q}(x)=\mathbb{E}[Y\mid do(P=p),X=x]-\mathbb{E}[Y\mid do(P=q),X=x],
 $$
 
-only where \(P\) is a well-defined manipulable experimental condition and the causal estimand is identifiable. For non-manipulable constructs, use descriptive conditional contrasts instead of \(do(\cdot)\). Outcome \(Y\) can be a decision, reaction time, trajectory feature, or neural summary, with explicit measurement units.
+only where $P$ is a well-defined manipulable experimental condition and the causal estimand is identifiable. For non-manipulable constructs, use descriptive conditional contrasts instead of $do(\cdot)$. Outcome $Y$ can be a decision, reaction time, trajectory feature, or neural summary, with explicit measurement units.
 
 ## 7. Differential trees and the search for invariant mechanisms
 
@@ -128,7 +128,7 @@ d_{\mathcal{T},\mathcal{C}}(U,V)=
 D\bigl(P_U(Y\mid\tau,c),P_V(Y\mid\tau,c)\bigr),
 $$
 
-where \(D\) is a specified divergence and \(\mathcal{T},\mathcal{C}\) are declared task and context sets. This is a *proposed metric-like comparison*, not necessarily a mathematical metric: the chosen divergence may fail symmetry or triangle inequality. Finite experimental coverage yields only bounded empirical evidence, not universal equivalence.
+where $D$ is a specified divergence and $\mathcal{T},\mathcal{C}$ are declared task and context sets. This is a *proposed metric-like comparison*, not necessarily a mathematical metric: the chosen divergence may fail symmetry or triangle inequality. Finite experimental coverage yields only bounded empirical evidence, not universal equivalence.
 
 A stronger notion could compare responses to interventions and adaptation over time. Such conditions are relevant to relay substitution in engineering, but neural circuits need not be interchangeable merely because their output distributions match in a narrow experiment.
 

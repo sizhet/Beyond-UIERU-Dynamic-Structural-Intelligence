@@ -35,13 +35,13 @@ The proposed tree representation may be insufficient when dependencies are cycli
 
 ## 3. A Minimal Dynamic Observation Model
 
-Let a dynamic intelligence unit be described by a stable structural descriptor \(D_U\) and an evolving internal state \(x_t\). Let \(p_t\) denote a perspective or evaluation configuration, \(c_t\) task context, \(e_t\) environment, \(r_t\) incoming relay information, and \(h_t\) relevant history. A provisional transition model is
+Let a dynamic intelligence unit be described by a stable structural descriptor $D_U$ and an evolving internal state $x_t$. Let $p_t$ denote a perspective or evaluation configuration, $c_t$ task context, $e_t$ environment, $r_t$ incoming relay information, and $h_t$ relevant history. A provisional transition model is
 
 $$
 (a_t,y_t,x_{t+1}) \sim K_U(\cdot\mid x_t,p_t,c_t,e_t,r_t,h_t),
 $$
 
-where \(a_t\) is a selected action and \(y_t\) an observable outcome. The stochastic kernel accommodates deterministic systems as a special case. History may be summarized in state only if an adequate state representation exists; otherwise the model must retain explicit history dependence.
+where $a_t$ is a selected action and $y_t$ an observable outcome. The stochastic kernel accommodates deterministic systems as a special case. History may be summarized in state only if an adequate state representation exists; otherwise the model must retain explicit history dependence.
 
 An observation record is
 
@@ -49,7 +49,7 @@ $$
 o=(u,v,t,p,c,e,h,r,m,q,s,a,y,\tau,\pi),
 $$
 
-where \(u\) is unit identity, \(v\) version, \(m\) mask specification, \(q\) candidate set, \(s\) available score data, \(\tau\) trajectory trace, and \(\pi\) provenance. Not all fields need be visible; missingness must be represented rather than silently imputed.
+where $u$ is unit identity, $v$ version, $m$ mask specification, $q$ candidate set, $s$ available score data, $\tau$ trajectory trace, and $\pi$ provenance. Not all fields need be visible; missingness must be represented rather than silently imputed.
 
 ## 4. Comparison Contracts: What Must Be Held Constant?
 
@@ -69,7 +69,7 @@ Changing perspective while holding these factors fixed supports a controlled com
 
 ## 5. Perspective Masking as a View Operator
 
-Write \(M_{p,m}(\mathcal O_U)\) for a view of observations \(\mathcal O_U\) filtered or projected under perspective \(p\) and mask \(m\). This **observational mask** does not alter the running unit. In contrast, \(I_{p,m}(U)\) denotes an **intervention** that may change scoring, action, feedback, or state transitions. A third operation, counterfactual reconstruction, estimates unobserved outcomes and requires explicit model assumptions.
+Write $M_{p,m}(\mathcal O_U)$ for a view of observations $\mathcal O_U$ filtered or projected under perspective $p$ and mask $m$. This **observational mask** does not alter the running unit. In contrast, $I_{p,m}(U)$ denotes an **intervention** that may change scoring, action, feedback, or state transitions. A third operation, counterfactual reconstruction, estimates unobserved outcomes and requires explicit model assumptions.
 
 These operations must not be conflated. In particular, an observational view may be idempotent under stable selection semantics while an intervention may not be. Nor does an equality between masked observations establish equality of the unmasked systems.
 
@@ -77,31 +77,31 @@ These operations must not be conflated. In particular, an observational view may
 
 ### 6.1 Scoring differential
 
-For comparable candidates \(k\), define
+For comparable candidates $k$, define
 
 $$
 \Delta S_k(p_i,p_j\mid z)=S_U(k,p_i\mid z)-S_U(k,p_j\mid z),
 $$
 
-where \(z\) denotes the fixed comparison conditions. This subtraction requires scores to share a calibrated scale. Otherwise rank changes, pairwise preferences, or normalized distributions are safer comparisons.
+where $z$ denotes the fixed comparison conditions. This subtraction requires scores to share a calibrated scale. Otherwise rank changes, pairwise preferences, or normalized distributions are safer comparisons.
 
 ### 6.2 Decision differential
 
-Define \(\Delta A\) as a relation between actions selected under two perspectives. It can encode same/different choice, top-\(k\) overlap, action distance, or a divergence between action distributions. Score differences need not produce decision differences.
+Define $\Delta A$ as a relation between actions selected under two perspectives. It can encode same/different choice, top-$k$ overlap, action distance, or a divergence between action distributions. Score differences need not produce decision differences.
 
 ### 6.3 Trajectory differential
 
-For trajectories \(\tau_i\) and \(\tau_j\), define
+For trajectories $\tau_i$ and $\tau_j$, define
 
 $$
 \Delta T=d_{\tau}(\tau_i,\tau_j\mid z),
 $$
 
-where \(d_{\tau}\) is a declared comparison function: event edit distance, aligned state divergence, outcome regret, or temporal-logic property mismatch. Different metrics capture different notions of behavioral difference; no universal metric is assumed.
+where $d_{\tau}$ is a declared comparison function: event edit distance, aligned state divergence, outcome regret, or temporal-logic property mismatch. Different metrics capture different notions of behavioral difference; no universal metric is assumed.
 
 ### 6.4 Learning and evolution differential
 
-For state or structure update operators \(L_U\), compare the post-experience states or their future observable behavior:
+For state or structure update operators $L_U$, compare the post-experience states or their future observable behavior:
 
 $$
 \Delta L=d_L\big(L_U(x,p_i,\xi_i),L_U(x,p_j,\xi_j)\big).
@@ -210,7 +210,7 @@ d_{\mathcal P,\mathcal C,H}(U,V)
 =\mathbb E_{z\sim\mu}\left[d_B(B_U(z),B_V(z))\right],
 $$
 
-for a declared test distribution \(\mu\) and behavioral metric \(d_B\). The result depends on sampling, coverage, and observability. Low average distance does not guarantee safety on rare but critical contexts. Worst-case constraints and explicit counterexample searches may be required before relay substitution.
+for a declared test distribution $\mu$ and behavioral metric $d_B$. The result depends on sampling, coverage, and observability. Low average distance does not guarantee safety on rare but critical contexts. Worst-case constraints and explicit counterexample searches may be required before relay substitution.
 
 ## 15. Mathematical Questions
 

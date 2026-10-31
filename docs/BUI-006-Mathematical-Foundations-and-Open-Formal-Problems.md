@@ -33,38 +33,38 @@ $$
 
 Here:
 
-- \(X\): internal states, including relevant history summaries;
-- \(A\): admissible actions and relay operations;
-- \(Y\): observable outputs and evidence records;
-- \(P\): perspectives (valuation or selection conditions);
-- \(C\): contexts, including environment and task descriptors;
-- \(\Theta\): structural configurations, potentially containing scoring forests and contracts;
-- \(\mathsf{step}:X\times\Theta\times P\times C\times A\to\mathcal D(X\times Y)\): possibly stochastic execution kernel;
-- \(\mathsf{observe}\): an explicitly typed observation function;
-- \(\mathsf{update}\): a rule that may revise state, parameters, or structure;
-- \(K\): interface and safety contracts.
+- $X$: internal states, including relevant history summaries;
+- $A$: admissible actions and relay operations;
+- $Y$: observable outputs and evidence records;
+- $P$: perspectives (valuation or selection conditions);
+- $C$: contexts, including environment and task descriptors;
+- $\Theta$: structural configurations, potentially containing scoring forests and contracts;
+- $\mathsf{step}:X\times\Theta\times P\times C\times A\to\mathcal D(X\times Y)$: possibly stochastic execution kernel;
+- $\mathsf{observe}$: an explicitly typed observation function;
+- $\mathsf{update}$: a rule that may revise state, parameters, or structure;
+- $K$: interface and safety contracts.
 
-\(\mathcal D\) denotes a probability distribution when stochastic behavior is modeled; a deterministic system is a special case. This tuple is a *modeling choice*, not a canonical definition of UIERU. For changing state spaces, embed configurations in a disjoint union \(\bigsqcup_{\theta\in\Theta}X_\theta\), or use a typed transition system indexed by configuration.
+$\mathcal D$ denotes a probability distribution when stochastic behavior is modeled; a deterministic system is a special case. This tuple is a *modeling choice*, not a canonical definition of UIERU. For changing state spaces, embed configurations in a disjoint union $\bigsqcup_{\theta\in\Theta}X_\theta$, or use a typed transition system indexed by configuration.
 
-A trace of horizon \(T\) is \(\tau=(x_0,a_0,y_1,x_1,\ldots,a_{T-1},y_T,x_T)\). Every comparison must declare the controlled inputs, context, perspective, observation policy, and horizon.
+A trace of horizon $T$ is $\tau=(x_0,a_0,y_1,x_1,\ldots,a_{T-1},y_T,x_T)$. Every comparison must declare the controlled inputs, context, perspective, observation policy, and horizon.
 
 ## 3. Three distinct meanings of masking
 
 ### 3.1 Observational projection
 
-An observational mask \(M:Y\to Z\) maps a complete observation to a restricted view. It does not alter the transition kernel. For trace observations, define \(M_*\) pointwise or through an explicitly declared aggregation.
+An observational mask $M:Y\to Z$ maps a complete observation to a restricted view. It does not alter the transition kernel. For trace observations, define $M_*$ pointwise or through an explicitly declared aggregation.
 
 ### 3.2 Execution intervention
 
-An intervention \(I\) changes a parameter, policy, scoring operator, or admissible action and thereby changes the transition kernel to \(\mathsf{step}^{I}\). An intervention is **not** interchangeable with observational projection.
+An intervention $I$ changes a parameter, policy, scoring operator, or admissible action and thereby changes the transition kernel to $\mathsf{step}^{I}$. An intervention is **not** interchangeable with observational projection.
 
 ### 3.3 Counterfactual reconstruction
 
-A counterfactual estimator \(\widehat{\mathsf{CF}}(U,I,e)\) estimates what might have happened under intervention \(I\) from evidence \(e\). Its result is model-dependent and requires uncertainty reporting and identification assumptions. It is neither an observation nor an automatically valid causal conclusion.
+A counterfactual estimator $\widehat{\mathsf{CF}}(U,I,e)$ estimates what might have happened under intervention $I$ from evidence $e$. Its result is model-dependent and requires uncertainty reporting and identification assumptions. It is neither an observation nor an automatically valid causal conclusion.
 
 ## 4. Open Problem M1 — A masking algebra
 
-For pure projections defined as field restrictions \(M_S\) onto sets of observable fields \(S\), suitable typed composition can satisfy
+For pure projections defined as field restrictions $M_S$ onto sets of observable fields $S$, suitable typed composition can satisfy
 
 $$
 M_S\circ M_T=M_{S\cap T},\qquad M_S\circ M_S=M_S.
@@ -72,15 +72,15 @@ $$
 
 These identities require a common underlying record space and consistent semantics. They should not be generalized to execution interventions, learned imputations, or aggregations without proof.
 
-**Questions:** Which masks commute? When does a mask preserve a property \(\varphi\)? Can masks form a lattice of observational information? Can one quantify the information discarded by a mask?
+**Questions:** Which masks commute? When does a mask preserve a property $\varphi$? Can masks form a lattice of observational information? Can one quantify the information discarded by a mask?
 
-**Candidate preservation statement:** For an observation-only mask \(M\), a property \(\varphi\) is preserved if it factors through \(M\): there exists \(\psi\) with \(\varphi=\psi\circ M\). This is a sufficient structural criterion, not a guarantee for arbitrary properties.
+**Candidate preservation statement:** For an observation-only mask $M$, a property $\varphi$ is preserved if it factors through $M$: there exists $\psi$ with $\varphi=\psi\circ M$. This is a sufficient structural criterion, not a guarantee for arbitrary properties.
 
 **Counterexample target:** Hide a variable that changes action selection while retaining a visible score. Show that apparent decision equivalence under the mask does not imply full behavioral equivalence.
 
 ## 5. Open Problem E1 — Behavioral equivalence under perspective
 
-For fixed \(p\in P\), \(c\in C\), and horizon \(T\), let \(\mathsf{Law}_T(U;p,c)\) denote the distribution of observable traces under a declared action-input protocol.
+For fixed $p\in P$, $c\in C$, and horizon $T$, let $\mathsf{Law}_T(U;p,c)$ denote the distribution of observable traces under a declared action-input protocol.
 
 Define an observational pseudodistance
 
@@ -88,9 +88,9 @@ $$
 d_T(U,V\mid p,c,M)=D\big(M_*\mathsf{Law}_T(U;p,c),M_*\mathsf{Law}_T(V;p,c)\big),
 $$
 
-where \(D\) is a stated probability-distribution distance, such as total variation where applicable. This can be zero for behaviorally distinct systems when the mask discards relevant information.
+where $D$ is a stated probability-distribution distance, such as total variation where applicable. This can be zero for behaviorally distinct systems when the mask discards relevant information.
 
-For a domain \(\Omega\subseteq P\times C\), a conditional approximate equivalence criterion is
+For a domain $\Omega\subseteq P\times C$, a conditional approximate equivalence criterion is
 
 $$
 U\approx_{\Omega,T,\varepsilon,M}V
@@ -110,7 +110,7 @@ $$
 \Gamma=(\Omega,T,M,\Pi,\Sigma,E),
 $$
 
-where \(\Pi\) fixes input/action protocols, \(\Sigma\) specifies score calibration, and \(E\) records evidence and provenance.
+where $\Pi$ fixes input/action protocols, $\Sigma$ specifies score calibration, and $E$ records evidence and provenance.
 
 A perspective differential record may contain
 
@@ -126,21 +126,21 @@ A Perspective Differential Tree (PDT) is proposed as an *index* over such condit
 
 ## 7. Open Problem Q1 — Perspective-aware query semantics
 
-A query result should be modeled as a pair \((r,\rho)\), where \(r\) is a result and \(\rho\) records provenance, comparison conditions, and uncertainty. For a query operator \(Q\), ask whether
+A query result should be modeled as a pair $(r,\rho)$, where $r$ is a result and $\rho$ records provenance, comparison conditions, and uncertainty. For a query operator $Q$, ask whether
 
 $$
 Q(M(D))\stackrel{?}{=}M'(Q(D))
 $$
 
-for a compatible output mask \(M'\). The equality holds only under explicit query and mask restrictions; aggregation, joins, and predicates on hidden fields can break it.
+for a compatible output mask $M'$. The equality holds only under explicit query and mask restrictions; aggregation, joins, and predicates on hidden fields can break it.
 
 **Research tasks:** Define typed perspective predicates; specify temporal snapshot semantics; distinguish observed outcomes from simulated counterfactuals; test provenance-preserving joins; and evaluate query-plan correctness.
 
 ## 8. Open Problem R1 — Relay composition and contracts
 
-Let \(U\otimes_R V\) be a partial composition operator, defined only when interface types and relay protocol \(R\) are compatible. It may not be associative: relay order, state sharing, and scheduling can change outcomes.
+Let $U\otimes_R V$ be a partial composition operator, defined only when interface types and relay protocol $R$ are compatible. It may not be associative: relay order, state sharing, and scheduling can change outcomes.
 
-Let \(A_U\Rightarrow G_U\) and \(A_V\Rightarrow G_V\) be assume-guarantee contracts. A composition theorem requires explicit compatibility assumptions—for example, each component's guarantees establish the other's assumptions, the relay protocol preserves required invariants, and the environment satisfies the remaining assumptions.
+Let $A_U\Rightarrow G_U$ and $A_V\Rightarrow G_V$ be assume-guarantee contracts. A composition theorem requires explicit compatibility assumptions—for example, each component's guarantees establish the other's assumptions, the relay protocol preserves required invariants, and the environment satisfies the remaining assumptions.
 
 **Questions:** Under what conditions is relay composition associative up to behavioral equivalence? Which safety properties are compositional? How should shared resources, feedback loops, and learning updates be represented?
 
@@ -148,9 +148,9 @@ Let \(A_U\Rightarrow G_U\) and \(A_V\Rightarrow G_V\) be assume-guarantee contra
 
 ## 9. Open Problem G1 — Open structural evolution
 
-Let structural evolution be \(\theta_{t+1}=G(\theta_t,x_t,e_t)\), where \(e_t\) includes evidence and counter-evidence. Growth may change the available state space, action vocabulary, or contracts.
+Let structural evolution be $\theta_{t+1}=G(\theta_t,x_t,e_t)$, where $e_t$ includes evidence and counter-evidence. Growth may change the available state space, action vocabulary, or contracts.
 
-**Questions:** What does identity preservation mean across changes in \(\theta\)? Which invariants can survive model-class expansion? Can local validation certificates be reused after structural updates? How should uncertainty accumulate across a chain of relays and revisions?
+**Questions:** What does identity preservation mean across changes in $\theta$? Which invariants can survive model-class expansion? Can local validation certificates be reused after structural updates? How should uncertainty accumulate across a chain of relays and revisions?
 
 A practical target is *versioned conditional assurance*: every claim records the configuration range, environment assumptions, evidence, and validity interval for which it is supported.
 

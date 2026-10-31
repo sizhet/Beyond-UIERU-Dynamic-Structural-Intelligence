@@ -48,16 +48,16 @@ $$
 
 Here:
 
-- \(X\) is the internal state space, including relevant history summaries;
-- \(A\) is the action space;
-- \(O\) is the observable output space;
-- \(P\) is the perspective space;
-- \(C\) is the context/environment specification space;
-- \(\Theta\) is the set of mutable structural and scoring parameters;
-- \(T(x',o\mid x,a,p,c,\theta)\) is a transition-and-observation kernel;
-- \(G(\theta'\mid\theta,x,a,o,p,c)\) describes permitted evolution;
-- \(\mathsf{obs}\) projects internal runs to an observer's allowed view;
-- \(\mathcal K\) is the declared contract set.
+- $X$ is the internal state space, including relevant history summaries;
+- $A$ is the action space;
+- $O$ is the observable output space;
+- $P$ is the perspective space;
+- $C$ is the context/environment specification space;
+- $\Theta$ is the set of mutable structural and scoring parameters;
+- $T(x',o\mid x,a,p,c,\theta)$ is a transition-and-observation kernel;
+- $G(\theta'\mid\theta,x,a,o,p,c)$ describes permitted evolution;
+- $\mathsf{obs}$ projects internal runs to an observer's allowed view;
+- $\mathcal K$ is the declared contract set.
 
 The model is an abstraction: some implementations will use deterministic transitions, non-Markovian history, changing action alphabets, or dynamically created components. In those cases the state and interface model must be extended, not silently assumed fixed.
 
@@ -67,7 +67,7 @@ $$
 D=(\mathcal P,\mathcal C,\mathcal H,\mathcal E,\mathcal M,\tau),
 $$
 
-specifying allowed perspectives, contexts, initial histories, environments, masking/observation policy, and observation horizon. A comparison claim without \(D\) is underspecified.
+specifying allowed perspectives, contexts, initial histories, environments, masking/observation policy, and observation horizon. A comparison claim without $D$ is underspecified.
 
 ## 4. Four Levels of Dynamic Equivalence
 
@@ -77,27 +77,27 @@ Two units are structurally compatible when their typed input/output interfaces a
 
 ### 4.2 Output equivalence
 
-For a fixed domain \(D\), units are output-equivalent if their observable output distributions agree for all admissible test conditions. Empirical finite-sample agreement supports only an estimate, not universal equivalence.
+For a fixed domain $D$, units are output-equivalent if their observable output distributions agree for all admissible test conditions. Empirical finite-sample agreement supports only an estimate, not universal equivalence.
 
 ### 4.3 Trajectory equivalence
 
-Trajectory equivalence compares sequences of observations, decisions, and possibly costs over a horizon \(\tau\). It can distinguish units that make the same immediate choice but behave differently after feedback.
+Trajectory equivalence compares sequences of observations, decisions, and possibly costs over a horizon $\tau$. It can distinguish units that make the same immediate choice but behave differently after feedback.
 
 ### 4.4 Contextual equivalence
 
-Two units are contextually equivalent relative to a family of permitted relay environments \(\mathfrak E\) and contract predicates \(\mathcal K\) if no admissible environment distinguishes them on the contract-relevant observations. This is substantially stronger than equality on a benchmark dataset.
+Two units are contextually equivalent relative to a family of permitted relay environments $\mathfrak E$ and contract predicates $\mathcal K$ if no admissible environment distinguishes them on the contract-relevant observations. This is substantially stronger than equality on a benchmark dataset.
 
 **Key principle:** every equivalence statement is relative to an observation policy and domain; no single equivalence relation automatically serves all applications.
 
 ## 5. Approximate Behavioral Distance
 
-For an explicitly selected observable trajectory metric \(d_{\mathrm{tr}}\), define a candidate distance
+For an explicitly selected observable trajectory metric $d_{\mathrm{tr}}$, define a candidate distance
 
 $$
  d_D(U,V)=\sup_{z\in D}\; \mathsf{Dist}\bigl(\mathcal L(\mathsf{obs}(\mathrm{Run}(U,z))),\mathcal L(\mathsf{obs}(\mathrm{Run}(V,z)))\bigr),
 $$
 
-where \(z\) is an admissible test configuration, \(\mathcal L\) denotes a trajectory distribution, and \(\mathsf{Dist}\) is a chosen distributional metric (for example, total variation or a Wasserstein metric when its assumptions hold).
+where $z$ is an admissible test configuration, $\mathcal L$ denotes a trajectory distribution, and $\mathsf{Dist}$ is a chosen distributional metric (for example, total variation or a Wasserstein metric when its assumptions hold).
 
 We may write
 
@@ -105,7 +105,7 @@ $$
 U\approx_{D,\epsilon}V \quad\Longleftrightarrow\quad d_D(U,V)\le\epsilon.
 $$
 
-This **tolerance relation need not be transitive**: \(d(U,V)\le\epsilon\) and \(d(V,W)\le\epsilon\) imply at most \(d(U,W)\le2\epsilon\) under a triangle inequality. Therefore an \(\epsilon\)-similarity group must not automatically be called an equivalence class. Exact zero-distance classes, when the metric assumptions support them, are a different object.
+This **tolerance relation need not be transitive**: $d(U,V)\le\epsilon$ and $d(V,W)\le\epsilon$ imply at most $d(U,W)\le2\epsilon$ under a triangle inequality. Therefore an $\epsilon$-similarity group must not automatically be called an equivalence class. Exact zero-distance classes, when the metric assumptions support them, are a different object.
 
 Practical measurements should report coverage, confidence intervals, shift sensitivity, and uncertainty due to unobserved histories.
 
@@ -130,7 +130,7 @@ $$
 U_A\otimes_R U_B
 $$
 
-represent a composition under relay protocol \(R\). The operator is *partial*: composition is defined only when required types, capabilities, permissions, timing constraints, and environmental assumptions are compatible.
+represent a composition under relay protocol $R$. The operator is *partial*: composition is defined only when required types, capabilities, permissions, timing constraints, and environmental assumptions are compatible.
 
 The resulting system may include new state (message queues, shared memory, retries), new actions (delegation, cancellation), and new failure modes (deadlocks, amplification, feedback loops). It is not generally the simple sum of the component units.
 
@@ -161,7 +161,7 @@ This is a research schema, not a universal theorem. The property (safety, livene
 
 ## 9. Substitution Is Context- and Contract-Relative
 
-Suppose \(U_A\) is replaced by \(U_B\) in environment \(E\). Substitution is justified only if
+Suppose $U_A$ is replaced by $U_B$ in environment $E$. Substitution is justified only if
 
 $$
 \mathcal K\bigl(E[U_A]\bigr)\;\Longrightarrow\;\mathcal K\bigl(E[U_B]\bigr)
@@ -189,7 +189,7 @@ $$
 R_{ij}(t,p,c,h;E)
 $$
 
-between units \(U_i\) and \(U_j\), conditional on time, perspective, context, interaction history, and relay environment. Relations may include delegation, dependence, competition, complementarity, substitution, shared learning, and evaluation authority.
+between units $U_i$ and $U_j$, conditional on time, perspective, context, interaction history, and relay environment. Relations may include delegation, dependence, competition, complementarity, substitution, shared learning, and evaluation authority.
 
 Represent a population as a time-varying, typed, attributed multigraph:
 
@@ -199,7 +199,7 @@ $$
 
 where nodes are evolving units, edges are observed or proposed relations, and attributes record contracts, evidence, confidence, and validity intervals.
 
-A relation is not necessarily stable or symmetric. For example, \(U_A\) can substitute for \(U_B\) under a low-latency perspective while the reverse fails under a high-accuracy perspective.
+A relation is not necessarily stable or symmetric. For example, $U_A$ can substitute for $U_B$ under a low-latency perspective while the reverse fails under a high-accuracy perspective.
 
 ## 11. What Counts as Emergence?
 
@@ -263,7 +263,7 @@ Such a query reports recorded events only. It does not establish causal responsi
 
 ## 14. Evolution, Identity, and Versioned Equivalence
 
-If \(U_t\) evolves to \(U_{t+1}\), a previously established similarity relation may no longer hold. The framework therefore requires:
+If $U_t$ evolves to $U_{t+1}$, a previously established similarity relation may no longer hold. The framework therefore requires:
 
 - versioned unit identities and contracts;
 - explicit update events and structural provenance;

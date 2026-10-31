@@ -60,16 +60,16 @@ $$
 
 where:
 
-- \(K\) is a structural core: capabilities, interfaces, contracts, and internal organization;
-- \(X\) is the state space, including memory and other historical variables;
-- \(\mathcal{P}\) is a set of possible perspectives or valuation configurations;
-- \(\mathcal{A}\) is the action and delegation space;
-- \(\mathcal{R}\) is the space of relay relationships and messages;
-- \(F\) is a state-transition mechanism;
-- \(G\) is an observation and decision mechanism, potentially using scoring forests;
-- \(\Gamma\) is a family of permitted adaptation or structural-update operations.
+- $K$ is a structural core: capabilities, interfaces, contracts, and internal organization;
+- $X$ is the state space, including memory and other historical variables;
+- $\mathcal{P}$ is a set of possible perspectives or valuation configurations;
+- $\mathcal{A}$ is the action and delegation space;
+- $\mathcal{R}$ is the space of relay relationships and messages;
+- $F$ is a state-transition mechanism;
+- $G$ is an observation and decision mechanism, potentially using scoring forests;
+- $\Gamma$ is a family of permitted adaptation or structural-update operations.
 
-At step \(t\), a simplified operational view is
+At step $t$, a simplified operational view is
 
 $$
 (a_t, y_t) = G(K_t, x_t, p_t, c_t, e_t),
@@ -79,7 +79,7 @@ $$
 (x_{t+1}, K_{t+1}) = F_{\Gamma}(K_t, x_t, a_t, y_t, r_t, e_t),
 $$
 
-where \(p_t\) denotes perspective, \(c_t\) context, \(e_t\) environment, \(r_t\) relay input/output, and \(y_t\) an observable outcome or trace. The equations are schematic; they do not imply that all implementations expose these variables or evolve on discrete time steps.
+where $p_t$ denotes perspective, $c_t$ context, $e_t$ environment, $r_t$ relay input/output, and $y_t$ an observable outcome or trace. The equations are schematic; they do not imply that all implementations expose these variables or evolve on discrete time steps.
 
 ### 3.1 What makes the unit dynamic?
 
@@ -117,7 +117,7 @@ Other useful restrictions include structural masks, scoring masks, temporal mask
 
 ### 5.1 A mathematical question, not an assumed law
 
-For masks \(M_P\) and \(M_Q\), one may ask whether
+For masks $M_P$ and $M_Q$, one may ask whether
 
 $$
 M_P(M_Q(U)) = M_{P\cap Q}(U).
@@ -129,7 +129,7 @@ This equality can hold for suitable pure projections. It need not hold for inter
 
 Traditional structural differences can be extended into three distinguishable families:
 
-**Scoring differential.** Given comparable runs under perspectives \(p_i\) and \(p_j\), compare normalized or calibrated valuation outputs. Raw score subtraction is not meaningful when scoring scales differ.
+**Scoring differential.** Given comparable runs under perspectives $p_i$ and $p_j$, compare normalized or calibrated valuation outputs. Raw score subtraction is not meaningful when scoring scales differ.
 
 **Decision differential.** Compare selected actions, delegation choices, or policies. Different scores can yield the same action; similar scores can yield different actions near a decision boundary.
 
@@ -147,7 +147,7 @@ $$
 Q(U,p,c,e,h,m),
 $$
 
-where \(m\) identifies the mask and \(h\) identifies relevant history or a bounded history representation.
+where $m$ identifies the mask and $h$ identifies relevant history or a bounded history representation.
 
 A minimal record schema might contain:
 
@@ -164,13 +164,13 @@ Ordinary SQL can query **recorded** behavior; counterfactual behavior requires a
 
 ## 8. Dynamic Equivalence and Relay Composition
 
-For a bounded family of contexts \(\mathcal C\), perspectives \(\mathcal P\), and a specified observation metric \(d\), one may propose
+For a bounded family of contexts $\mathcal C$, perspectives $\mathcal P$, and a specified observation metric $d$, one may propose
 
 $$
 U_i \approx_{\mathcal P,\mathcal C,\varepsilon} U_j
 $$
 
-when their relevant observed behaviors differ by no more than \(\varepsilon\) under a stated protocol. The definition is incomplete until the behavior space, sampling regime, metric, time horizon, and confidence criteria are fixed.
+when their relevant observed behaviors differ by no more than $\varepsilon$ under a stated protocol. The definition is incomplete until the behavior space, sampling regime, metric, time horizon, and confidence criteria are fixed.
 
 Possible levels of equivalence include output, decision, trace, probabilistic, and contextual or compositional equivalence. Formal methods such as bisimulation and approximate simulation offer important prior art to investigate; UIERU does not automatically require inventing a new equivalence theory.
 

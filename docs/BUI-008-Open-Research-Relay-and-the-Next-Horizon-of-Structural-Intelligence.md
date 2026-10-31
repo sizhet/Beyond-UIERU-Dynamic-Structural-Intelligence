@@ -52,13 +52,13 @@ $$
 U_{t+1} = \mathcal{E}(U_t, a_t, o_t, h_t).
 $$
 
-Here \(\mathcal{E}\) is an abstract update operation; its meaning depends on the implementation. A second-order problem asks how a research or engineering system can establish warranted claims *about* the evolving unit:
+Here $\mathcal{E}$ is an abstract update operation; its meaning depends on the implementation. A second-order problem asks how a research or engineering system can establish warranted claims *about* the evolving unit:
 
 $$
 K_{t+1} = \mathcal{R}(K_t, D_t, A_t, X_t),
 $$
 
-where \(K_t\) is the current body of qualified knowledge, \(D_t\) new observations, \(A_t\) assumptions and model revisions, and \(X_t\) counter-evidence. The expression is a conceptual schema, not a validated law of scientific progress.
+where $K_t$ is the current body of qualified knowledge, $D_t$ new observations, $A_t$ assumptions and model revisions, and $X_t$ counter-evidence. The expression is a conceptual schema, not a validated law of scientific progress.
 
 This second-order layer should itself support provenance, versioning, dispute resolution, and revision. It must not silently promote an empirical regularity into a universal theorem.
 
@@ -233,7 +233,7 @@ $$
 R_{ij}(t,p,c,h)
 $$
 
-be a provisional description of how units \(i\) and \(j\) relate under time, perspective, context, and history. Candidate relations include relay, dependency, competition, substitution, cooperation, shared learning, and governance.
+be a provisional description of how units $i$ and $j$ relate under time, perspective, context, and history. Candidate relations include relay, dependency, competition, substitution, cooperation, shared learning, and governance.
 
 Such relations may be directed, weighted, typed, and time-varying. A multi-unit system may therefore require joint analysis of:
 

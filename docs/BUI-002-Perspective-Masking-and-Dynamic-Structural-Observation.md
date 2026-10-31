@@ -30,15 +30,15 @@ $$
 
 where:
 
-- \(I\): identity and version metadata;
-- \(K\): structural core, including capabilities, contracts, and interface descriptions;
-- \(X\): internal state space;
-- \(\mathcal P\): supported perspective space;
-- \(\mathcal A\): candidate actions and delegations;
-- \(S\): scoring or valuation mechanism, potentially a forest of operators;
-- \(T\): transition mechanism for state and action consequences;
-- \(R\): relay and interaction interfaces;
-- \(L\): learning or structural evolution mechanism.
+- $I$: identity and version metadata;
+- $K$: structural core, including capabilities, contracts, and interface descriptions;
+- $X$: internal state space;
+- $\mathcal P$: supported perspective space;
+- $\mathcal A$: candidate actions and delegations;
+- $S$: scoring or valuation mechanism, potentially a forest of operators;
+- $T$: transition mechanism for state and action consequences;
+- $R$: relay and interaction interfaces;
+- $L$: learning or structural evolution mechanism.
 
 A discrete-time model, offered for tractability rather than biological fidelity, is
 
@@ -51,7 +51,7 @@ x_{t+1}=T_U(x_t,a_t,e_t,f_t;\theta_t),\qquad
 \theta_{t+1}=L_U(\theta_t,x_t,a_t,f_t),
 $$
 
-where \(p_t\) is perspective, \(c_t\) context, \(e_t\) environment, \(f_t\) feedback, \(\theta_t\) evolving structural parameters, and \(y_t\) observable outputs. The model allows stochastic mechanisms by interpreting \(\pi_U,T_U,L_U\) as probability kernels.
+where $p_t$ is perspective, $c_t$ context, $e_t$ environment, $f_t$ feedback, $\theta_t$ evolving structural parameters, and $y_t$ observable outputs. The model allows stochastic mechanisms by interpreting $\pi_U,T_U,L_U$ as probability kernels.
 
 A **trace** is a time-indexed record of selected observable fields, for example
 
@@ -59,7 +59,7 @@ $$
 \tau=(I,t,p_t,c_t,\widehat x_t,a_t,y_t,f_t,r_t,\nu_t)_{t=0}^{n},
 $$
 
-with \(r_t\) relay events and \(\nu_t\) version identifiers. The hat on \(\widehat x_t\) denotes a partial or estimated state, not privileged access to the true state.
+with $r_t$ relay events and $\nu_t$ version identifiers. The hat on $\widehat x_t$ denotes a partial or estimated state, not privileged access to the true state.
 
 ## 3. What Is a Perspective?
 
@@ -79,7 +79,7 @@ The word *mask* is dangerously ambiguous unless its operational meaning is speci
 
 ### 4.1 Structural projection
 
-A projection \(M^{\mathrm{proj}}_F\) selects fields \(F\) from a fixed representation or recorded trace:
+A projection $M^{\mathrm{proj}}_F$ selects fields $F$ from a fixed representation or recorded trace:
 
 $$
 M^{\mathrm{proj}}_F(\tau)=\tau|_F.
@@ -89,11 +89,11 @@ It does not rerun the UIERU or alter the historical decision. This is the closes
 
 ### 4.2 Observational filtering
 
-An observational mask \(M^{\mathrm{obs}}_q\) selects recorded episodes satisfying predicate \(q\), such as a perspective class or time window. Filtering changes the population of observations and may introduce selection bias; it does not show what the same unit *would have done* under a different perspective.
+An observational mask $M^{\mathrm{obs}}_q$ selects recorded episodes satisfying predicate $q$, such as a perspective class or time window. Filtering changes the population of observations and may introduce selection bias; it does not show what the same unit *would have done* under a different perspective.
 
 ### 4.3 Execution intervention
 
-An intervention \(M^{\mathrm{do}}_{p\leftarrow p^*}\) changes an input, policy, or scoring component during a new run. It may change the selected action, downstream environment, feedback, and future state. Such a mask is an **experiment**, not a passive view. For an intervention on a scoring subtree, the system must declare how removed contributions are handled (zeroed, renormalized, replaced, or prohibited).
+An intervention $M^{\mathrm{do}}_{p\leftarrow p^*}$ changes an input, policy, or scoring component during a new run. It may change the selected action, downstream environment, feedback, and future state. Such a mask is an **experiment**, not a passive view. For an intervention on a scoring subtree, the system must declare how removed contributions are handled (zeroed, renormalized, replaced, or prohibited).
 
 ### 4.4 Counterfactual reconstruction
 
@@ -130,13 +130,13 @@ $$
 q=(U,\mathcal P_q,\mathcal C_q,[t_0,t_1],m,\sigma),
 $$
 
-where \(m\) is a mask specification and \(\sigma\) an observation semantics tag. Its result is
+where $m$ is a mask specification and $\sigma$ an observation semantics tag. Its result is
 
 $$
 V_q=(D_q,\Gamma_q,\Omega_q),
 $$
 
-where \(D_q\) contains selected data, \(\Gamma_q\) provenance and experimental conditions, and \(\Omega_q\) limitations or uncertainty.
+where $D_q$ contains selected data, $\Gamma_q$ provenance and experimental conditions, and $\Omega_q$ limitations or uncertainty.
 
 A useful engineering split is:
 
@@ -149,7 +149,7 @@ This preserves the investment in SIF localization while preventing dynamic trace
 
 ## 7. Candidate Algebra of Masking
 
-Mathematical structure depends on mask semantics. For pure field projection onto sets \(F\) and \(G\), under a common immutable representation,
+Mathematical structure depends on mask semantics. For pure field projection onto sets $F$ and $G$, under a common immutable representation,
 
 $$
 M_F^{\mathrm{proj}}\circ M_G^{\mathrm{proj}}=M_{F\cap G}^{\mathrm{proj}},
@@ -170,15 +170,15 @@ We should distinguish **view equivalence**, **decision preservation**, **traject
 
 ## 8. Differential Observation Across Perspectives
 
-Given matched runs under perspectives \(p_i\) and \(p_j\), a candidate differential record is
+Given matched runs under perspectives $p_i$ and $p_j$, a candidate differential record is
 
 $$
 \Delta_{ij}=(\Delta S,\Delta A,\Delta\tau,\Delta L;\Gamma),
 $$
 
-where the components denote scoring differences, decision differences, trajectory differences, and learning/evolution differences; \(\Gamma\) records matching assumptions and provenance.
+where the components denote scoring differences, decision differences, trajectory differences, and learning/evolution differences; $\Gamma$ records matching assumptions and provenance.
 
-A simple score difference \(S(U,p_i)-S(U,p_j)\) is interpretable only when score scales, candidate sets, and normalization are comparable. For heterogeneous scoring forests, rank changes, pairwise preference reversals, or calibrated outcome measures may be more defensible than raw subtraction.
+A simple score difference $S(U,p_i)-S(U,p_j)$ is interpretable only when score scales, candidate sets, and normalization are comparable. For heterogeneous scoring forests, rank changes, pairwise preference reversals, or calibrated outcome measures may be more defensible than raw subtraction.
 
 A Perspective Differential Tree can organize common conditions at the trunk and branch by verified differences. The tree should retain *unknown* and *not comparable* states instead of forcing every observation into an apparent match or mismatch. Detailed tree design is developed in BUI-003.
 
@@ -186,9 +186,9 @@ A Perspective Differential Tree can organize common conditions at the trunk and 
 
 Consider a UIERU choosing among models A, B, and C for a coding task. The available choices, test inputs, tool budget, and model versions are held fixed for an experiment.
 
-- Under cost-first perspective \(p_C\), the unit chooses A.
-- Under quality-first perspective \(p_Q\), it chooses B.
-- Under latency-first perspective \(p_L\), it chooses C.
+- Under cost-first perspective $p_C$, the unit chooses A.
+- Under quality-first perspective $p_Q$, it chooses B.
+- Under latency-first perspective $p_L$, it chooses C.
 
 These are **illustrative hypothetical observations**, not benchmark findings.
 

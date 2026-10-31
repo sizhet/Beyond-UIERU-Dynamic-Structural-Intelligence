@@ -44,7 +44,7 @@ $$
 o = (u, v, p, c, e, h, t, m, a, s, r, \pi),
 $$
 
-where \(u\) is unit identity; \(v\) its structural version; \(p\) the perspective configuration; \(c\) the task/context; \(e\) the environment; \(h\) a history/state reference; \(t\) observation time; \(m\) the masking protocol; \(a\) the selected action or capability; \(s\) scoring evidence; \(r\) the outcome; and \(\pi\) provenance.
+where $u$ is unit identity; $v$ its structural version; $p$ the perspective configuration; $c$ the task/context; $e$ the environment; $h$ a history/state reference; $t$ observation time; $m$ the masking protocol; $a$ the selected action or capability; $s$ scoring evidence; $r$ the outcome; and $\pi$ provenance.
 
 This is a conceptual tuple, not a demand that every field fit in one physical table. Observations may be partial, asynchronous, and heterogeneous. Missing evidence must remain distinguishable from negative evidence.
 
@@ -63,7 +63,7 @@ $$
 Q(D; P,C,E,H,T,M,K),
 $$
 
-where \(D\) is the dataset and \(K\) is an explicit **comparison contract** specifying comparability requirements. The output should include both records and the conditions under which they were selected.
+where $D$ is the dataset and $K$ is an explicit **comparison contract** specifying comparability requirements. The output should include both records and the conditions under which they were selected.
 
 PASQ extends the semantics of the *query workflow*, not necessarily SQL syntax. It may be implemented with ordinary SQL views, user-defined functions, analytical pipelines, and external graph or trace stores.
 
@@ -264,7 +264,7 @@ Each node should preserve comparison keys, provenance, observation windows, samp
 
 ## 13. Query Semantics and Algebraic Research
 
-For an observational projection \(M\) and query \(Q\), one may ask whether
+For an observational projection $M$ and query $Q$, one may ask whether
 
 $$
 Q(M(D)) = M'(Q(D)).
