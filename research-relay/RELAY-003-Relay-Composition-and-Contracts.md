@@ -55,14 +55,14 @@ $$
 
 where:
 
-- \(X\) is internal state, including relevant history;
-- \(I,O\) are typed input and output spaces;
-- \(P\) is the set of perspectives or evaluation contexts;
-- \(\Theta\) is the policy/scoring configuration;
-- \(\mathcal A\) is the action alphabet;
-- \(T\) governs state, action, and output transitions;
-- \(G\) is an admissible learning or structural-update relation;
-- \(E\) represents evidence and provenance records.
+- $X$ is internal state, including relevant history;
+- $I,O$ are typed input and output spaces;
+- $P$ is the set of perspectives or evaluation contexts;
+- $\Theta$ is the policy/scoring configuration;
+- $\mathcal A$ is the action alphabet;
+- $T$ governs state, action, and output transitions;
+- $G$ is an admissible learning or structural-update relation;
+- $E$ represents evidence and provenance records.
 
 A transition may be represented as
 
@@ -82,7 +82,7 @@ $$
 r=(id,s,d,k,v,c,p,a,h,\pi,\tau),
 $$
 
-with sender \(s\), destination \(d\), message kind \(k\), payload \(v\), context reference \(c\), perspective \(p\), authority or capability token \(a\), history reference \(h\), provenance \(\pi\), and logical time \(\tau\).
+with sender $s$, destination $d$, message kind $k$, payload $v$, context reference $c$, perspective $p$, authority or capability token $a$, history reference $h$, provenance $\pi$, and logical time $\tau$.
 
 The record is a **candidate interface**, not a universal wire format. Implementations may add confidentiality labels, validity periods, idempotency keys, uncertainty intervals, resource budgets, and schema versions.
 
@@ -101,24 +101,24 @@ The record is a **candidate interface**, not a universal wire format. Implementa
 
 ## 5. Contract Model
 
-For unit \(U\), propose the contract
+For unit $U$, propose the contract
 
 $$
 C_U=(\Sigma_I,\Sigma_O,A,G,S,L,R,V,\Pi),
 $$
 
-where \(\Sigma_I,\Sigma_O\) are input/output schemas, \(A\) environmental assumptions, \(G\) guarantees, \(S\) safety invariants, \(L\) liveness or progress obligations, \(R\) resource and latency bounds, \(V\) validity conditions (context, perspective, version, time horizon), and \(\Pi\) provenance and audit obligations.
+where $\Sigma_I,\Sigma_O$ are input/output schemas, $A$ environmental assumptions, $G$ guarantees, $S$ safety invariants, $L$ liveness or progress obligations, $R$ resource and latency bounds, $V$ validity conditions (context, perspective, version, time horizon), and $\Pi$ provenance and audit obligations.
 
 A contract should specify **what may be relied upon**, not simply describe how a unit is implemented.
 
 ### 5.1 Satisfaction
 
-Let \(operatorname{Traces}(U\mid A,V)\) denote the unit's observable traces under admissible assumptions and validity conditions. A simple trace-level contract satisfaction relation is:
+Let $\mathrm{Traces}(U\mid A,V)$ denote the unit's observable traces under admissible assumptions and validity conditions. A simple trace-level contract satisfaction relation is:
 
 $$
 U\models C_U
 \iff
-\forall\rho\in operatorname{Traces}(U\mid A,V):
+\forall\rho\in \mathrm{Traces}(U\mid A,V):
 \rho\models G\land S\land L\land R\land\Pi.
 $$
 
@@ -136,7 +136,7 @@ $$
 U_1\;\mathbin{\triangleright_R}\;U_2
 $$
 
-for a directed relay from \(U_1\) to \(U_2\) through relay adapter \(R\). The adapter may validate types, redact fields, map perspectives, enforce permissions, and record provenance.
+for a directed relay from $U_1$ to $U_2$ through relay adapter $R$. The adapter may validate types, redact fields, map perspectives, enforce permissions, and record provenance.
 
 A composed system is a graph
 
@@ -144,7 +144,7 @@ $$
 \mathcal N=(\{U_i\}_{i\in N},\{R_{ij}\}_{(i,j)\in E},C_{\mathcal N}),
 $$
 
-with a system contract \(C_{\mathcal N}\) defined over **externally observable network traces**, not merely the conjunction of node contracts.
+with a system contract $C_{\mathcal N}$ defined over **externally observable network traces**, not merely the conjunction of node contracts.
 
 ### 6.1 Compatibility is multidimensional
 
@@ -160,21 +160,21 @@ Passing a JSON schema check establishes only a fraction of these obligations.
 
 ## 7. Candidate Assume–Guarantee Composition Rule
 
-For a sequential pair \(U_1\triangleright_R U_2\), a sufficient-condition research template is:
+For a sequential pair $U_1\triangleright_R U_2$, a sufficient-condition research template is:
 
-1. \(U_1\models C_1\) and \(U_2\models C_2\) under their declared environments.
-2. The adapter \(R\) preserves required types, semantics, authority, and evidence.
-3. The guaranteed outputs of \(U_1\), after adaptation, satisfy the assumptions of \(U_2\).
+1. $U_1\models C_1$ and $U_2\models C_2$ under their declared environments.
+2. The adapter $R$ preserves required types, semantics, authority, and evidence.
+3. The guaranteed outputs of $U_1$, after adaptation, satisfy the assumptions of $U_2$.
 4. Shared resources, interference, and temporal constraints are accounted for.
 5. The desired network property is derivable from these obligations.
 
-Then a **particular** system guarantee \(G_{12}\) may follow:
+Then a **particular** system guarantee $G_{12}$ may follow:
 
 $$
 \bigl(U_1\models C_1\bigr)\land
 \bigl(U_2\models C_2\bigr)\land
-operatorname{Compat}(C_1,R,C_2)
-\land operatorname{SideConditions}
+\mathrm{Compat}(C_1,R,C_2)
+\land \mathrm{SideConditions}
 \Rightarrow
 (U_1\triangleright_R U_2)\models G_{12}.
 $$
@@ -199,7 +199,7 @@ This may hold for a carefully defined abstract message-passing semantics with co
 
 ## 9. Contract Refinement and Substitution
 
-Write \(C'\preceq C\) when a replacement contract is a valid refinement of the original under a defined refinement order. Informally, a replacement should not require stronger environmental assumptions or promise weaker externally relevant guarantees.
+Write $C'\preceq C$ when a replacement contract is a valid refinement of the original under a defined refinement order. Informally, a replacement should not require stronger environmental assumptions or promise weaker externally relevant guarantees.
 
 The familiar intuition is:
 
@@ -220,11 +220,11 @@ U'\preceq_{C,V}U
 \mathcal N[U]\models C_{\mathcal N}.
 $$
 
-Here \(\mathcal N[\cdot]\) is a network context with one designated replaceable position. This implication is a conjectured target requiring an explicit semantics and proof.
+Here $\mathcal N[\cdot]$ is a network context with one designated replaceable position. This implication is a conjectured target requiring an explicit semantics and proof.
 
 ## 10. Dynamic Contracts Under Learning and RSI
 
-A unit that learns can satisfy a contract at time \(t\) and violate it at \(t+1\). Therefore, static interface compatibility cannot certify unrestricted self-modification.
+A unit that learns can satisfy a contract at time $t$ and violate it at $t+1$. Therefore, static interface compatibility cannot certify unrestricted self-modification.
 
 Propose a governed update transaction:
 
@@ -239,18 +239,18 @@ Propose a governed update transaction:
 A possible temporal invariant is:
 
 $$
-\Box\bigl(operatorname{Active}(U,v)
+\Box\bigl(\mathrm{Active}(U,v)
 \Rightarrow
-operatorname{Approved}(v,C,V)\bigr),
+\mathrm{Approved}(v,C,V)\bigr),
 $$
 
-where \(\Box\) means “always” in the selected temporal logic. Approval is an operational condition, not proof that every future trace is safe.
+where $\Box$ means “always” in the selected temporal logic. Approval is an operational condition, not proof that every future trace is safe.
 
 RSI and UIERU can meet here: RSI proposes and explores improvements; UIERU-like contracts and control planes evaluate and govern which changes may enter a live Relay network. Conversely, RSI methods may accelerate structural search within a governed UIERU ecosystem.
 
 ## 11. Perspective-Aware Contract Composition
 
-Suppose \(U_A\) scores candidates by cost and \(U_B\) scores by safety. A naïve relay that forwards only a scalar score loses essential meaning. Define a score envelope:
+Suppose $U_A$ scores candidates by cost and $U_B$ scores by safety. A naïve relay that forwards only a scalar score loses essential meaning. Define a score envelope:
 
 ```yaml
 score:
@@ -267,7 +267,7 @@ score:
 
 *All values above are illustrative, not empirical results.*
 
-**Open problem C3:** Define when a perspective mapping \(f:P_A\to P_B\) preserves a decision or contract property, and when it merely transfers a nonbinding observation.
+**Open problem C3:** Define when a perspective mapping $f:P_A\to P_B$ preserves a decision or contract property, and when it merely transfers a nonbinding observation.
 
 ## 12. Provenance and Counter-Evidence Across Relays
 

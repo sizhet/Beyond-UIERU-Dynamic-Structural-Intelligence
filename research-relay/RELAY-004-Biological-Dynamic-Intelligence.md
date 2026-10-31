@@ -42,7 +42,7 @@ These are *motivations for hypotheses*, not evidence that any particular UIERU m
 
 ## 3. Candidate dynamic organizational model
 
-Let an organism be studied under task environment \(e_t\), measured context \(c_t\), latent or estimated internal state \(z_t\), action \(a_t\), observation \(o_t\), and history \(h_t\). A candidate descriptive model is
+Let an organism be studied under task environment $e_t$, measured context $c_t$, latent or estimated internal state $z_t$, action $a_t$, observation $o_t$, and history $h_t$. A candidate descriptive model is
 
 $$
  z_{t+1} \sim T_\theta(z_{t+1}\mid z_t,o_t,a_t,c_t,e_t),
@@ -50,13 +50,13 @@ $$
  a_t \sim \pi_\theta(a_t\mid z_t,c_t,h_t).
 $$
 
-A *perspective* \(p\) denotes a declared analytic question, for example reward sensitivity, threat avoidance, uncertainty reduction, or energy expenditure. A perspective-conditioned observational map is
+A *perspective* $p$ denotes a declared analytic question, for example reward sensitivity, threat avoidance, uncertainty reduction, or energy expenditure. A perspective-conditioned observational map is
 
 $$
  y_t^{(p)}=M_p(o_{0:t},a_{0:t},c_{0:t},\hat z_{0:t};\mathcal A_p),
 $$
 
-where \(\mathcal A_p\) records measurement and modeling assumptions. \(M_p\) is a **researcher's transformation of data** unless an actual intervention is specified. It is not assumed to be a biological operator.
+where $\mathcal A_p$ records measurement and modeling assumptions. $M_p$ is a **researcher's transformation of data** unless an actual intervention is specified. It is not assumed to be a biological operator.
 
 A UIERU-like *functional unit* is provisionally a tuple
 
@@ -64,7 +64,7 @@ $$
  U=(B, I, V, D, F, L, R, \Gamma),
 $$
 
-where \(B\) is a candidate boundary, \(I\) inputs, \(V\) valuation or task-dependent prioritization, \(D\) decision dynamics, \(F\) feedback, \(L\) learning, \(R\) interactions with other units, and \(\Gamma\) the validity conditions of the description. No one-to-one correspondence with neurons or regions is implied.
+where $B$ is a candidate boundary, $I$ inputs, $V$ valuation or task-dependent prioritization, $D$ decision dynamics, $F$ feedback, $L$ learning, $R$ interactions with other units, and $\Gamma$ the validity conditions of the description. No one-to-one correspondence with neurons or regions is implied.
 
 ## 4. Three competing explanations of functional organization
 
@@ -142,7 +142,7 @@ $$
  \left[D\big(P_A(\tau_{0:H}\mid x,p),P_B(\tau_{0:H}\mid x,p)\big)\right],
 $$
 
-where \(\mathcal C\) specifies context distribution, \(H\) a time horizon, \(\tau\) a behavioral trajectory, and \(D\) a declared divergence or distance. This is a **candidate metric or pseudometric**, depending on \(D\) and the model class; metric properties are not assumed.
+where $\mathcal C$ specifies context distribution, $H$ a time horizon, $\tau$ a behavioral trajectory, and $D$ a declared divergence or distance. This is a **candidate metric or pseudometric**, depending on $D$ and the model class; metric properties are not assumed.
 
 Small discrepancy may justify a restricted behavioral comparison, not mechanistic equivalence or safe interchangeability. Neural perturbation can distinguish systems that look equivalent under passive observation.
 
@@ -150,14 +150,14 @@ Small discrepancy may justify a restricted behavioral comparison, not mechanisti
 
 The term **Relay** here denotes a proposed description of information, influence, or functional dependency across components and timescales. Biological signal propagation, network interactions, and learning transfer are not automatically equivalent to software message passing.
 
-A candidate interaction graph \(G_t=(V_t,E_t,W_t)\) can summarize inferred relationships among observed populations. Its edge semantics must be declared:
+A candidate interaction graph $G_t=(V_t,E_t,W_t)$ can summarize inferred relationships among observed populations. Its edge semantics must be declared:
 
 - statistical association;
 - directed predictive dependence;
 - estimated effective connectivity;
 - experimentally supported causal influence.
 
-These edge types cannot be freely substituted. A change in \(G_t\) may reflect genuine reorganization, changes in sampling, movement artifacts, or altered model fitting. **Two-way evidence flow** means that failed predictions and counter-evidence update the structural hypothesis rather than being discarded.
+These edge types cannot be freely substituted. A change in $G_t$ may reflect genuine reorganization, changes in sampling, movement artifacts, or altered model fitting. **Two-way evidence flow** means that failed predictions and counter-evidence update the structural hypothesis rather than being discarded.
 
 ## 10. Mathematical research problems
 

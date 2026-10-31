@@ -48,20 +48,20 @@ $$
 
 where:
 
-- \(S\): internal operational states, including memory and relevant history;
-- \(A\): available actions and relay requests;
-- \(O\): externally visible outputs, including error, abstention, and escalation;
-- \(C\): contexts and environmental conditions;
-- \(P\): perspectives governing valuation and admissible observations;
-- \(\Theta\): structural configurations, such as model, tool graph, or scoring policy;
-- \(K(s',o\mid s,a,c,p,\theta)\): transition/output kernel;
-- \(\pi(a\mid s,c,p,\theta)\): action policy;
-- \(G(\theta'\mid\theta,s,o,c,p)\): optional structural update kernel;
-- \(s_0\): initial state or distribution.
+- $S$: internal operational states, including memory and relevant history;
+- $A$: available actions and relay requests;
+- $O$: externally visible outputs, including error, abstention, and escalation;
+- $C$: contexts and environmental conditions;
+- $P$: perspectives governing valuation and admissible observations;
+- $\Theta$: structural configurations, such as model, tool graph, or scoring policy;
+- $K(s',o\mid s,a,c,p,\theta)$: transition/output kernel;
+- $\pi(a\mid s,c,p,\theta)$: action policy;
+- $G(\theta'\mid\theta,s,o,c,p)$: optional structural update kernel;
+- $s_0$: initial state or distribution.
 
-The effective state can be expanded to \(x=(s,\theta)\) so that structural learning is part of the dynamics. This representation is a **candidate abstraction**, not a claim that every real system exposes such variables or admits a compact Markov model.
+The effective state can be expanded to $x=(s,\theta)$ so that structural learning is part of the dynamics. This representation is a **candidate abstraction**, not a claim that every real system exposes such variables or admits a compact Markov model.
 
-An observation interface \(M_p\) projects an execution into a perspective-specific trace. In keeping with RELAY-001, this is a **passive projection** unless an intervention is explicitly specified.
+An observation interface $M_p$ projects an execution into a perspective-specific trace. In keeping with RELAY-001, this is a **passive projection** unless an intervention is explicitly specified.
 
 A comparison envelope is
 
@@ -69,9 +69,9 @@ $$
 \Gamma=(\mathcal D,\mathcal C,\mathcal P,H,M,\mathcal K,\varepsilon,\delta,V),
 $$
 
-with task/input distribution \(\mathcal D\), admissible contexts \(\mathcal C\), perspectives \(\mathcal P\), horizon \(H\), observation map \(M\), contract \(\mathcal K\), behavioral tolerance \(\varepsilon\), statistical error budget \(\delta\), and version/provenance conditions \(V\).
+with task/input distribution $\mathcal D$, admissible contexts $\mathcal C$, perspectives $\mathcal P$, horizon $H$, observation map $M$, contract $\mathcal K$, behavioral tolerance $\varepsilon$, statistical error budget $\delta$, and version/provenance conditions $V$.
 
-**Important:** \(\Gamma\) is part of the claim. Changing it may change the equivalence judgment.
+**Important:** $\Gamma$ is part of the claim. Changing it may change the equivalence judgment.
 
 ## 4. A hierarchy of relations
 
@@ -81,17 +81,17 @@ Two units are interface-compatible if their accepted inputs, output schemas, err
 
 ### 4.2 Finite-sample observational agreement
 
-Given paired tests \(D_n=\{(z_i,y_i^A,y_i^B)\}_{i=1}^n\), define an empirical discrepancy:
+Given paired tests $D_n=\{(z_i,y_i^A,y_i^B)\}_{i=1}^n$, define an empirical discrepancy:
 
 $$
 \widehat d_M(A,B;D_n)=\frac{1}{n}\sum_{i=1}^n \ell\big(M(y_i^A),M(y_i^B)\big).
 $$
 
-The loss \(\ell\) and sampling protocol must be declared. A small observed discrepancy is **evidence**, not proof of global equivalence.
+The loss $\ell$ and sampling protocol must be declared. A small observed discrepancy is **evidence**, not proof of global equivalence.
 
 ### 4.3 Trace-distribution similarity
 
-For a fixed \(\Gamma\), let \(\mathsf P_{A,\Gamma}^{H}\) and \(\mathsf P_{B,\Gamma}^{H}\) be the induced distributions over masked traces of length at most \(H\). Define
+For a fixed $\Gamma$, let $\mathsf P_{A,\Gamma}^{H}$ and $\mathsf P_{B,\Gamma}^{H}$ be the induced distributions over masked traces of length at most $H$. Define
 
 $$
 A\approx_{\Gamma,\varepsilon}^{\mathrm{trace}}B
@@ -99,14 +99,14 @@ A\approx_{\Gamma,\varepsilon}^{\mathrm{trace}}B
  d\!\left(\mathsf P_{A,\Gamma}^{H},\mathsf P_{B,\Gamma}^{H}\right)\leq\varepsilon,
 $$
 
-where \(d\) may be total variation, a task-grounded integral probability metric, or another justified pseudometric. The metric must match the operational consequence of differences; generic string similarity may be inappropriate.
+where $d$ may be total variation, a task-grounded integral probability metric, or another justified pseudometric. The metric must match the operational consequence of differences; generic string similarity may be inappropriate.
 
 ### 4.4 Approximate bisimulation candidate
 
-For state-expanded transition systems, consider a relation \(R\subseteq X_A\times X_B\). A candidate \(\varepsilon\)-approximate bisimulation requires:
+For state-expanded transition systems, consider a relation $R\subseteq X_A\times X_B$. A candidate $\varepsilon$-approximate bisimulation requires:
 
 1. Related states have output observations within an explicitly chosen metric/tolerance.
-2. For every admissible matched input or action, successor-state distributions can be coupled so that the probability of leaving \(R\) is bounded by a stated error.
+2. For every admissible matched input or action, successor-state distributions can be coupled so that the probability of leaving $R$ is bounded by a stated error.
 3. The requirements hold symmetrically, or asymmetry is declared and the relation is called a simulation/refinement instead.
 4. Context, perspective, and adaptation transitions are included in the quantified conditions.
 
@@ -114,27 +114,27 @@ This is a **research definition template**; the precise probabilistic lifting, m
 
 ### 4.5 Contract-relative substitutability
 
-Let \(\mathcal K\) be a set of observable requirements, such as latency bounds, evidence provenance, abstention policy, data handling, and escalation semantics. Define a directed relation:
+Let $\mathcal K$ be a set of observable requirements, such as latency bounds, evidence provenance, abstention policy, data handling, and escalation semantics. Define a directed relation:
 
 $$
 B\preceq_{\Gamma,\mathcal K} A
 $$
 
-if, under the specified admissible environments and horizon, replacing \(A\) with \(B\) preserves the requirements \(\mathcal K\). This relation is generally **not symmetric**: \(B\) may safely replace \(A\) for a narrow contract while the reverse fails for a different contract.
+if, under the specified admissible environments and horizon, replacing $A$ with $B$ preserves the requirements $\mathcal K$. This relation is generally **not symmetric**: $B$ may safely replace $A$ for a narrow contract while the reverse fails for a different contract.
 
 ### 4.6 Evolution-aware compatibility
 
-Define a set \(\mathcal G\) of permitted update policies. Evolution-aware compatibility asks whether a relation remains valid along updates generated by \(\mathcal G\), possibly with a bounded drift budget:
+Define a set $\mathcal G$ of permitted update policies. Evolution-aware compatibility asks whether a relation remains valid along updates generated by $\mathcal G$, possibly with a bounded drift budget:
 
 $$
 \sup_{t\leq H}d_t(A_t,B_t)\leq\varepsilon_t.
 $$
 
-The trajectories \(A_t,B_t\) must specify whether updates share data, are independently trained, or are coupled through the same environment. Without that detail, the expression is not an operational test.
+The trajectories $A_t,B_t$ must specify whether updates share data, are independently trained, or are coupled through the same environment. Without that detail, the expression is not an operational test.
 
 ## 5. Perspective conditioning and masking
 
-The same pair of units may be similar under a cost-oriented perspective and sharply different under a safety-oriented one. A mask \(M_p\) can omit latency, evidence lineage, uncertainty, or learning changes; omission must never be treated as proof of equality of the omitted attributes.
+The same pair of units may be similar under a cost-oriented perspective and sharply different under a safety-oriented one. A mask $M_p$ can omit latency, evidence lineage, uncertainty, or learning changes; omission must never be treated as proof of equality of the omitted attributes.
 
 We therefore distinguish:
 
@@ -163,7 +163,7 @@ The following are **research targets**, not established theorems of this project
 
 ### Proposition candidate A — Observation coarsening
 
-If \(M_2=f\circ M_1\) is a deterministic post-processing of \(M_1\), and trace distance is total variation, then data processing suggests
+If $M_2=f\circ M_1$ is a deterministic post-processing of $M_1$, and trace distance is total variation, then data processing suggests
 
 $$
 d_{TV}(M_{2\#}P,M_{2\#}Q)\leq d_{TV}(M_{1\#}P,M_{1\#}Q).
@@ -173,11 +173,11 @@ $$
 
 ### Proposition candidate B — Finite-horizon accumulation
 
-If one-step coupling failure is bounded by \(\eta\) uniformly on related states, investigate conditions for an \(H\)-step bound of order \(H\eta\), capped at one. **Proof task:** state action matching, conditioning, and adaptation assumptions precisely. Nonstationary update rules may invalidate a naive bound.
+If one-step coupling failure is bounded by $\eta$ uniformly on related states, investigate conditions for an $H$-step bound of order $H\eta$, capped at one. **Proof task:** state action matching, conditioning, and adaptation assumptions precisely. Nonstationary update rules may invalidate a naive bound.
 
 ### Proposition candidate C — Relay congruence
 
-For a relay context \(R[\cdot]\), investigate when
+For a relay context $R[\cdot]$, investigate when
 
 $$
 A\approx_{\Gamma,\varepsilon}B
@@ -189,7 +189,7 @@ $$
 
 ### Proposition candidate D — Contract refinement
 
-Under an explicitly defined assume–guarantee semantics, study whether \(B\preceq_{\mathcal K}A\) is preserved by a coordinator whose assumptions are satisfied by \(B\). This is directional and depends on how contracts quantify over environments.
+Under an explicitly defined assume–guarantee semantics, study whether $B\preceq_{\mathcal K}A$ is preserved by a coordinator whose assumptions are satisfied by $B$. This is directional and depends on how contracts quantify over environments.
 
 ### Proposition candidate E — Stability under evolution
 
@@ -207,7 +207,7 @@ Two units return the same number. One records verifiable evidence lineage; the o
 
 ### CE-3 — One-step similarity, divergent learning
 
-At \(t=0\), two policies match. One updates its scoring weights after feedback, while the other does not. Their actions diverge at \(t=5\). One-step equivalence did not imply evolution-aware equivalence.
+At $t=0$, two policies match. One updates its scoring weights after feedback, while the other does not. Their actions diverge at $t=5$. One-step equivalence did not imply evolution-aware equivalence.
 
 ### CE-4 — Locally equivalent, globally different
 
@@ -221,7 +221,7 @@ These are conceptual/synthetic counterexamples, not empirical observations about
 
 ## 9. Worked synthetic comparison
 
-Consider hypothetical units \(A\) and \(B\) serving document-grounded questions. The service contract requires correct responses, citation lineage, escalation for low confidence, and p95 latency below a threshold. The following data are **invented solely to illustrate method**:
+Consider hypothetical units $A$ and $B$ serving document-grounded questions. The service contract requires correct responses, citation lineage, escalation for low confidence, and p95 latency below a threshold. The following data are **invented solely to illustrate method**:
 
 | Measurement (synthetic) | Unit A | Unit B | Contract relevance |
 |---|---:|---:|---|
@@ -231,7 +231,7 @@ Consider hypothetical units \(A\) and \(B\) serving document-grounded questions.
 | p95 latency | 1.8 s | 1.4 s | Yes |
 | Post-update behavior drift | 2% | 16% | Relevant if updates are allowed |
 
-Even though their synthetic answer agreement is identical, \(B\) cannot be declared a safe substitute under the illustrated provenance and escalation clauses. If the contract only concerned response latency and a narrow task subset, a different conclusion might be supported. **The relation depends on \(\Gamma\) and \(\mathcal K\), not on a universal ranking of units.**
+Even though their synthetic answer agreement is identical, $B$ cannot be declared a safe substitute under the illustrated provenance and escalation clauses. If the contract only concerned response latency and a narrow task subset, a different conclusion might be supported. **The relation depends on $\Gamma$ and $\mathcal K$, not on a universal ranking of units.**
 
 ## 10. A reproducible comparison protocol
 
@@ -266,12 +266,12 @@ $$
 \mathcal R = U_1\circ_{C_{12}}U_2\circ_{C_{23}}\cdots\circ U_n,
 $$
 
-where each \(C_{ij}\) denotes a typed handoff contract rather than an assumption of ordinary function composition. Contracts may include input schema, evidence obligations, failure handling, deadlines, data rights, and escalation behavior.
+where each $C_{ij}$ denotes a typed handoff contract rather than an assumption of ordinary function composition. Contracts may include input schema, evidence obligations, failure handling, deadlines, data rights, and escalation behavior.
 
-A substitution certificate for \(U_k\rightarrow U'_k\) should specify:
+A substitution certificate for $U_k\rightarrow U'_k$ should specify:
 
 - which assumptions about the coordinator and neighbors were checked;
-- which guarantees \(U'_k\) provides;
+- which guarantees $U'_k$ provides;
 - which hidden effects or shared resources remain unmodeled;
 - how errors propagate across downstream steps;
 - whether the certificate survives allowed learning updates.

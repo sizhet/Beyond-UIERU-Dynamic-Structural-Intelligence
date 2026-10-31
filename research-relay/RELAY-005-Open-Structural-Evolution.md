@@ -47,7 +47,7 @@ Repeated execution can relay experience into evidence stores, precedent registri
 
 ## 3. A Minimal Evolutionary State Model
 
-Let the system state at step \(t\) be
+Let the system state at step $t$ be
 
 $$
 \mathcal{S}_t=(U_t,G_t,C_t,F_t,H_t,E_t,\Gamma_t),
@@ -55,27 +55,27 @@ $$
 
 where:
 
-- \(U_t\): a set of versioned intelligence units;
-- \(G_t\): typed relay and dependency graph;
-- \(C_t\): interface and behavioral contracts;
-- \(F_t\): perspective-indexed scoring policies or forests;
-- \(H_t\): histories, provenance, and precedent records;
-- \(E_t\): supporting and counter-evidence;
-- \(\Gamma_t\): governance rules, permissions, and evaluator authority.
+- $U_t$: a set of versioned intelligence units;
+- $G_t$: typed relay and dependency graph;
+- $C_t$: interface and behavioral contracts;
+- $F_t$: perspective-indexed scoring policies or forests;
+- $H_t$: histories, provenance, and precedent records;
+- $E_t$: supporting and counter-evidence;
+- $\Gamma_t$: governance rules, permissions, and evaluator authority.
 
-An evolutionary proposal \(a_t\) induces a candidate transition
+An evolutionary proposal $a_t$ induces a candidate transition
 
 $$
 \widehat{\mathcal{S}}_{t+1}=T(\mathcal{S}_t,a_t,\xi_t),
 $$
 
-with \(\xi_t\) representing environmental uncertainty and stochastic effects. A separate governance procedure decides whether to deploy, sandbox, revise, or reject that candidate:
+with $\xi_t$ representing environmental uncertainty and stochastic effects. A separate governance procedure decides whether to deploy, sandbox, revise, or reject that candidate:
 
 $$
-\mathcal{S}_{t+1}=operatorname{Gate}(\mathcal{S}_t,\widehat{\mathcal{S}}_{t+1},\mathcal{V}_t).
+\mathcal{S}_{t+1}=\mathrm{Gate}(\mathcal{S}_t,\widehat{\mathcal{S}}_{t+1},\mathcal{V}_t).
 $$
 
-Here \(\mathcal{V}_t\) is a validation dossier, not a single scalar score. This separation between **proposal** and **authorization** is fundamental.
+Here $\mathcal{V}_t$ is a validation dossier, not a single scalar score. This separation between **proposal** and **authorization** is fundamental.
 
 ### 3.1 State identity and lineage
 
@@ -107,7 +107,7 @@ These operators are research primitives, not an exhaustive or universally safe i
 
 ## 5. Perspective-Dependent Fitness and Selection
 
-There is no generally valid single fitness function for all UIERUs, subjects, and environments. Let \(p\) denote a perspective, \(c\) a context, and \(h\) an observed history. Define a conditional evaluation vector:
+There is no generally valid single fitness function for all UIERUs, subjects, and environments. Let $p$ denote a perspective, $c$ a context, and $h$ an observed history. Define a conditional evaluation vector:
 
 $$
 \mathbf{q}(a\mid p,c,h)=
@@ -115,7 +115,7 @@ $$
 q_{\mathrm{safety}},q_{\mathrm{robustness}},q_{\mathrm{novelty}}).
 $$
 
-A perspective-dependent preference relation \(\succeq_{p,c}\) may rank candidates, but the preference relation itself must be documented and subject to governance. Hard constraints cannot safely be collapsed into compensatory scalar weights without explicit authorization.
+A perspective-dependent preference relation $\succeq_{p,c}$ may rank candidates, but the preference relation itself must be documented and subject to governance. Hard constraints cannot safely be collapsed into compensatory scalar weights without explicit authorization.
 
 ### 5.1 Evaluation sovereignty
 
@@ -191,7 +191,7 @@ $$
 U_i \approx_{p,c,h,\epsilon,T} U_j
 $$
 
-mean that two units satisfy a declared comparison relation under perspective \(p\), context \(c\), history \(h\), tolerance \(\epsilon\), and horizon \(T\). Evolution introduces a new question: how long does that relation remain valid after either unit changes?
+mean that two units satisfy a declared comparison relation under perspective $p$, context $c$, history $h$, tolerance $\epsilon$, and horizon $T$. Evolution introduces a new question: how long does that relation remain valid after either unit changes?
 
 A replacement decision should therefore include:
 
